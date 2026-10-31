@@ -15,6 +15,10 @@ Repo propio (`github.com/hnkatze/baleadafit-landing`), en paralelo al portal (`b
 - **S7** — "me gusta lo que hay, pero siento que algunas secciones estan muy amontonadas muy pegadas, entonces para que manejemos un poco eso ppor ahi pls": más aire vertical entre secciones y dentro de las tarjetas, sin tocar el sistema de diseño, el copy ni la estructura.
 - **S8** — "el navbar tiene demaciada pegazon, algunas de esas hacen saltos de linea nose raro en lg": desde `lg` el navbar no parte los labels en dos líneas ni amontona los bloques.
 
+- **S9** — "es hora de darle vida animacioneessss bonitas llamativas y atractivas": movimiento en la landing que se sienta cuidado y llamativo, sin volverse molesto ni romper accesibilidad.
+- [x] T17 · S9 · sistema de movimiento: tokens de easing, revelado por sección con stagger, sombra del header al scrollear, feedback de presión · commit `fb910e1`
+- [x] T18 · S9 · movimiento con datos: contadores del hero, dibujo de la curva de grasa visceral y fade del toggle de precios · commit pendiente
+
 ## Tasks
 
 - [x] T1 · S1,S6 · base: tokens del sistema de diseño en `global.css`, `Layout.astro` (lang es, fuentes, meta), assets de marca en `public/brand`, referencia de diseño en `docs/design` · commit `feat: bootstrap landing shell with Stitch design tokens`
@@ -70,3 +74,11 @@ Decisiones de port documentadas en `docs/design/landing.md`: clases `font-<token
 **L15** — "l que digo es que el navbar tiene espacios desperdiciados a los anchos igual que todo el sitio, igual que el footer podriamos aprovecharlos mas en lg creo"
 
 **L16** — Contenedores ensanchados: `--container-8xl: 85rem` (1360 px) desde `xl` y `--container-9xl: 100rem` (1600 px) desde `2xl`, aplicados en navbar, hero, las seis secciones y el footer. Acompañan el mockup del hero (`2xl:max-w-7xl`), la barra de métricas (`2xl:max-w-6xl`) y la grilla de testimonios (`2xl:max-w-6xl`). Medido: contenedor 1265 px a 1280 de viewport, 1360 a 1440, 1521 a 1536 y 1600 a 1920 (antes 1280 en todos); `overflowX` 0 y navbar sin desborde en los cuatro anchos, links siempre en una línea.
+
+**L17** — "ok commit y push y es hora de darle vida animacioneessss bonitas llamativas y atractivas"
+
+**L18** — Gate de movimiento (skill `animate`): landing de marketing = primera visita, así que el presupuesto de deleite aplica; propósitos nombrados = explicación (revelado guía el ojo) y deleite (contadores y curva). Descartado a propósito: flotación/parallax del mockup y pulsos de glow, porque el mockup contiene datos que el usuario lee y el movimiento constante distrae.
+
+**L19** — Ingredientes: sólo `transform` y `opacity`; curvas `--ease-swift: cubic-bezier(0.23,1,0.32,1)` (entradas) y `--ease-move` (movimiento en pantalla); revelado 560 ms con stagger de 70 ms tope 280 ms; contadores 1100 ms con ease-out cúbica; dibujo de la curva 900 ms por `stroke-dashoffset`; cambio de precio 140 ms con transición (no keyframes); feedback de presión 120 ms `scale(0.97)`.
+
+**L20** — El estado oculto lo define el CSS y no el JS (`main > section > * > *`), así no hay parpadeo entre el primer paint y el observer; `IntersectionObserver` sólo agrega `.is-in`. Verificado en navegador: sección fuera de pantalla en `opacity: 0` + `translateY(20px)` que pasa a `opacity: 1` / `transform: none` con delays 0 s, 0.07 s; con `prefers-reduced-motion: reduce` emulado las siete secciones quedan visibles al instante y la curva ya está dibujada; el toggle deja el texto viejo durante los 140 ms y después muestra `L. 600 / 1,160 / 2,320` con sus subtítulos. También se cambió el `transition-all` del mock por `transition` (propiedades nombradas) en seis componentes.
