@@ -17,14 +17,14 @@ Repo propio (`github.com/hnkatze/baleadafit-landing`), en paralelo al portal (`b
 
 - **S9** — "es hora de darle vida animacioneessss bonitas llamativas y atractivas": movimiento en la landing que se sienta cuidado y llamativo, sin volverse molesto ni romper accesibilidad.
 - [x] T17 · S9 · sistema de movimiento: tokens de easing, revelado por sección con stagger, sombra del header al scrollear, feedback de presión · commit `fb910e1`
-- [x] T18 · S9 · movimiento con datos: contadores del hero, dibujo de la curva de grasa visceral y fade del toggle de precios · commit pendiente
+- [x] T18 · S9 · movimiento con datos: contadores del hero, dibujo de la curva de grasa visceral y fade del toggle de precios · commit `8bedfe1`
 
 - **S10** — "bordes animados de cards, cosas asi, que sean animaciones por view de la section, asi tendremos scroll animation nose": bordes animados en las tarjetas y movimiento atado a la posición del scroll (view timeline), no sólo un disparo único al entrar.
 - [x] T19 · S10 · bordes animados de tarjetas (barrido al entrar + anillo girando al hover) y revelado/cascada atados a `animation-timeline: view()` con fallback por `IntersectionObserver` · commit `738a284`
 
 ## Tasks
 
-- [x] T1 · S1,S6 · base: tokens del sistema de diseño en `global.css`, `Layout.astro` (lang es, fuentes, meta), assets de marca en `public/brand`, referencia de diseño en `docs/design` · commit `feat: bootstrap landing shell with Stitch design tokens`
+- [x] T1 · S1,S6 · base: tokens del sistema de diseño en `global.css`, `Layout.astro` (lang es, fuentes, meta), assets de marca en `public/brand`, referencia de diseño en `docs/design` · commit `764d253`
 - [x] T2 · S1 · `Navbar.astro` · commit `47feae4` — header fijo, nav desktop, CTAs, menú mobile
 - [x] T3 · S1 · `Hero.astro` · commit `47feae4` — badge, H1 con subrayado ondulado, CTAs, línea de confianza, barra de métricas
 - [x] T4 · S1 · `HeroProduct.astro` · commit `47feae4` — ventana de producto, ficha de paciente, reingeniería nutricional, bot WhatsApp, curva InBody
@@ -35,8 +35,8 @@ Repo propio (`github.com/hnkatze/baleadafit-landing`), en paralelo al portal (`b
 - [x] T9 · S1 · `Testimonials.astro` · commit `97713e4` — 2 tarjetas con estrellas y firma
 - [x] T10 · S1 · `FinalCta.astro` · commit `97713e4` — bloque navy con badge y 3 garantías
 - [x] T11 · S1 · `SiteFooter.astro` · commit `97713e4` — marca, contacto, 3 columnas, barra inferior
-- [ ] T12 · S1,S2 · integrar `index.astro`, borrar scaffold del starter, revisión responsive y de accesibilidad
-- [ ] T13 · S3,S4 · README del repo y cierre de la feature
+- [x] T12 · S1,S2 · integrar `index.astro`, borrar scaffold del starter, revisión responsive y de accesibilidad · commits `47feae4`, `f5ea348`
+- [x] T13 · S3,S4 · README del repo y cierre de la feature · commit `f5ea348`
 - [x] T15 · S7 · ritmo vertical: tokens `space-3xl`/`space-4xl`, secciones a 80 px (mobile) / 96 px (desktop), grids y padding de tarjetas más abiertos, mockup del hero intacto · commit `b4fdcb4`
 - [x] T16 · S8 · navbar en una línea: links con `whitespace-nowrap`, CTA secundaria recién desde `2xl`, holguras entre bloques del header · commit `57c2bec`
 - [x] T20 · S9/S10 · verificación con Lighthouse y correcciones de accesibilidad: contraste del token `outline`, orden de encabezados y pareja de tokens en las CTA emerald · commits `87885f0`, `24e68e8`
