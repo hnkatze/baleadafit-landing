@@ -44,6 +44,20 @@
   --color-tertiary-container: #00b982;
   --color-on-tertiary-container: #00422c;
 
+  /* Variantes fijas (fixed) del sistema */
+  --color-primary-fixed: #6ffbbe;
+  --color-primary-fixed-dim: #4edea3;
+  --color-on-primary-fixed: #002113;
+  --color-on-primary-fixed-variant: #005236;
+  --color-secondary-fixed: #a6f2d1;
+  --color-secondary-fixed-dim: #8bd6b6;
+  --color-on-secondary-fixed: #002116;
+  --color-on-secondary-fixed-variant: #00513b;
+  --color-tertiary-fixed: #68fcbf;
+  --color-tertiary-fixed-dim: #45dfa4;
+  --color-on-tertiary-fixed: #002114;
+  --color-on-tertiary-fixed-variant: #005137;
+
   /* Estados */
   --color-error: #ba1a1a;
   --color-on-error: #ffffff;
@@ -53,6 +67,8 @@
   /* Tipografía */
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  /* El mock usa el token de familia "code-data" para los datos monoespaciados. */
+  --font-code-data: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --text-display-lg: 36px;
   --text-display-lg--line-height: 44px;

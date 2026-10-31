@@ -1,0 +1,138 @@
+---
+const navLinks = [
+  { label: 'Características', href: '#caracteristicas' },
+  { label: 'Gastronomía HN', href: '#gastronomia' },
+  { label: 'Planes SaaS', href: '#planes' },
+  { label: 'Casos de Éxito', href: '#casos' },
+  { label: 'Calculadora ROI', href: '#roi' },
+];
+---
+
+<header
+  class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"
+>
+  <div
+    class="h-20 w-full px-gutter-desktop max-w-7xl mx-auto flex items-center justify-between gap-space-md"
+  >
+    <div class="flex items-center gap-space-md shrink-0">
+      <img
+        src="/brand/baleadafit-lockup.png"
+        alt="BaleadaFit Pro"
+        class="h-8 w-auto object-contain rounded-md"
+      />
+      <div class="flex flex-col">
+        <span class="text-title-md text-on-surface font-extrabold tracking-tight"
+          >BaleadaFit<span class="text-primary"> Pro</span></span
+        >
+        <span
+          class="text-label-sm text-outline tracking-wider uppercase hidden sm:inline-block"
+          >Clinical Nutrition Suite</span
+        >
+      </div>
+    </div>
+
+    <nav class="hidden xl:flex items-center gap-space-xs" aria-label="Navegación principal">
+      {
+        navLinks.map((link) => (
+          <a
+            class="px-space-sm py-space-xs text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors"
+            href={link.href}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center gap-space-sm shrink-0">
+      <a
+        class="hidden sm:inline-flex items-center justify-center h-10 px-space-md rounded-lg text-title-sm text-on-surface bg-surface-container-lowest shadow-[0_1px_3px_0_rgba(15,23,42,0.05)] hover:bg-surface-container-low hover:text-on-surface transition-all"
+        href="#planes">Ver Demo Interactiva</a
+      >
+      <a
+        class="hidden sm:inline-flex items-center justify-center h-10 px-space-md rounded-lg text-title-sm text-on-primary bg-primary-container hover:bg-primary transition-all shadow-[0_0_0_1px_#34D399,0_4px_14px_0_rgba(52,211,153,0.2)]"
+        href="#planes"
+      >
+        <span
+          class="material-symbols-outlined text-[18px] mr-space-xs hidden md:inline-block"
+          aria-hidden="true">health_and_safety</span
+        >Prueba Gratuita 14 Días
+      </a>
+      <div
+        class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs shadow-sm"
+        aria-hidden="true"
+      >
+        <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+      </div>
+      <button
+        type="button"
+        class="xl:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        aria-controls="navbar-mobile-panel"
+        data-navbar-toggle
+      >
+        <span class="material-symbols-outlined text-[22px]" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <div
+    id="navbar-mobile-panel"
+    class="hidden xl:hidden border-t border-outline-variant/50 bg-surface/95 backdrop-blur-xl"
+    data-navbar-panel
+  >
+    <nav
+      class="max-w-7xl mx-auto px-gutter-desktop py-space-md flex flex-col gap-space-xs"
+      aria-label="Navegación móvil"
+    >
+      {
+        navLinks.map((link) => (
+          <a
+            class="px-space-sm py-space-sm text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors"
+            href={link.href}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+      <a
+        class="mt-space-xs inline-flex items-center justify-center h-10 px-space-md rounded-lg text-title-sm text-on-primary bg-primary-container hover:bg-primary transition-all shadow-[0_0_0_1px_#34D399,0_4px_14px_0_rgba(52,211,153,0.2)]"
+        href="#planes">Prueba Gratuita 14 Días</a
+      >
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('[data-navbar-toggle]');
+  const panel = document.querySelector<HTMLElement>('[data-navbar-panel]');
+
+  if (toggle && panel) {
+    const setOpen = (open: boolean) => {
+      toggle.setAttribute('aria-expanded', String(open));
+      panel.classList.toggle('hidden', !open);
+    };
+
+    const isOpen = () => toggle.getAttribute('aria-expanded') === 'true';
+
+    toggle.addEventListener('click', () => setOpen(!isOpen()));
+
+    panel.addEventListener('click', (event) => {
+      if (event.target instanceof Element && event.target.closest('a')) setOpen(false);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && isOpen()) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    document.addEventListener('click', (event) => {
+      if (event.target instanceof Node && panel.isConnected && isOpen()) {
+        if (!toggle.contains(event.target) && !panel.contains(event.target)) setOpen(false);
+      }
+    });
+  }
+</script>

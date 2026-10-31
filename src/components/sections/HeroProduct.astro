@@ -1,0 +1,240 @@
+---
+// Mockup flotante del producto (port 1:1 de docs/design/stitch-landing.html, bytes 12442-20720).
+// No incluye wrapper de sección: el <section id="inicio"> vive en Hero.astro.
+---
+
+<!-- Dashboard Mockup Floating Viewport -->
+<div class="relative w-full max-w-5xl mx-auto -mt-4">
+  <div class="p-space-sm bg-surface-container rounded-2xl shadow-xl">
+    <div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+      <!-- Mockup Header Bar -->
+      <div
+        class="bg-surface-container-low px-space-md py-space-sm flex items-center justify-between"
+      >
+        <div class="flex items-center gap-space-xs">
+          <span class="w-3 h-3 rounded-full bg-error/70 inline-block" aria-hidden="true"
+          ></span>
+          <span class="w-3 h-3 rounded-full bg-amber-400/80 inline-block" aria-hidden="true"
+          ></span>
+          <span
+            class="w-3 h-3 rounded-full bg-primary-container/80 inline-block"
+            aria-hidden="true"></span>
+          <span class="font-code-data ml-space-sm text-code-data text-outline"
+            >baleadafit.pro/clinica/pacientes/hn-0492-carlos-m</span
+          >
+        </div>
+        <div class="flex items-center gap-space-xs">
+          <span
+            class="inline-flex items-center gap-1 text-label-sm bg-surface-container px-2 py-0.5 rounded text-primary"
+          >
+            <span
+              class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"
+              aria-hidden="true"></span>
+            InBody BLE Conectado
+          </span>
+        </div>
+      </div>
+      <!-- Dashboard Content Layout Grid -->
+      <div class="p-space-lg grid grid-cols-1 lg:grid-cols-12 gap-space-lg bg-surface">
+        <!-- Left Column: Patient Profile & Macro Target -->
+        <div class="lg:col-span-4 flex flex-col gap-space-md">
+          <div class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm">
+            <div class="flex items-center justify-between mb-space-sm">
+              <div class="flex items-center gap-space-sm">
+                <div
+                  class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface"
+                >
+                  CM
+                </div>
+                <div>
+                  <div class="text-title-sm text-on-surface">Carlos Mendoza (34a)</div>
+                  <div class="text-body-sm text-outline">Tegucigalpa · Metabólico</div>
+                </div>
+              </div>
+              <span
+                class="text-label-sm bg-secondary-container text-on-secondary-container px-2 py-1 rounded-full"
+                >Fase 2 Activa</span
+              >
+            </div>
+            <!-- Macros progress -->
+            <div class="space-y-space-xs pt-space-xs">
+              <div class="flex justify-between text-label-sm text-outline">
+                <span>Carbohidratos (Baleada integral HN)</span>
+                <span class="font-code-data text-on-surface font-semibold"
+                  >185g / 210g</span
+                >
+              </div>
+              <div
+                class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden"
+              >
+                <div class="h-full bg-blue-500 rounded-full" style="width: 78%;"></div>
+              </div>
+              <div class="flex justify-between text-label-sm text-outline pt-1">
+                <span>Proteínas (Huevo + Cuajada light)</span>
+                <span class="font-code-data text-on-surface font-semibold"
+                  >134g / 140g</span
+                >
+              </div>
+              <div
+                class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden"
+              >
+                <div class="h-full bg-primary-container rounded-full" style="width: 95%;"
+                ></div>
+              </div>
+              <div class="flex justify-between text-label-sm text-outline pt-1">
+                <span>Lípidos (Aguacate de Tela)</span>
+                <span class="font-code-data text-on-surface font-semibold">52g / 58g</span>
+              </div>
+              <div
+                class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden"
+              >
+                <div class="h-full bg-amber-500 rounded-full" style="width: 88%;"></div>
+              </div>
+            </div>
+          </div>
+          <!-- WhatsApp Automation Status Chip -->
+          <div
+            class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm flex items-start gap-space-sm"
+          >
+            <div
+              class="w-9 h-9 rounded-full bg-primary-container/20 text-primary flex items-center justify-center shrink-0"
+            >
+              <span class="material-symbols-outlined text-[20px]" aria-hidden="true"
+                >chat</span
+              >
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <span class="text-title-sm text-on-surface">Bot WhatsApp (+504)</span>
+                <span class="text-label-sm text-primary font-bold">Enviado 07:15 AM</span>
+              </div>
+              <p class="text-body-sm text-on-surface-variant mt-1">
+                "¡Hola Carlos! Tu baleada clínica matutina está calculada en 490 kcal.
+                Recordá tus 300 ml de agua fresca."
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Right Column: Comparative Nutrition & InBody Curve -->
+        <div class="lg:col-span-8 flex flex-col gap-space-md">
+          <!-- Comparative Analysis Card: Baleada Tradicional vs Reingeniería Clínica -->
+          <div class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm">
+            <div class="flex items-center justify-between mb-space-sm">
+              <div>
+                <h4 class="text-title-md text-on-surface font-bold"
+                  >Reingeniería Nutricional BaleadaFit™</h4
+                >
+                <p class="text-body-sm text-outline"
+                  >Optimización de ingredientes autóctonos sin sacrificar sabor</p
+                >
+              </div>
+              <span
+                class="text-label-sm bg-primary/10 text-primary px-3 py-1 rounded-full font-semibold"
+                >TCA-HN Certificado</span
+              >
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+              <!-- Standard Street Baleada -->
+              <div class="p-space-sm bg-surface-container-high/60 rounded-lg">
+                <div
+                  class="flex items-center justify-between text-outline text-label-sm mb-1"
+                >
+                  <span>Baleada Calle Típica</span>
+                  <span class="text-error font-bold">Desbalanceada</span>
+                </div>
+                <div class="text-headline-sm font-extrabold text-on-surface mb-2">
+                  680 <span class="text-body-sm font-normal text-outline">kcal</span>
+                </div>
+                <div class="space-y-1 text-body-sm text-on-surface-variant">
+                  <div class="flex justify-between">
+                    <span>Harina blanca refinada:</span>
+                    <strong class="text-on-surface">62g CHO</strong>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Manteca vegetal / Frijol refrito:</span>
+                    <strong class="text-error">28g Grasa</strong>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Mantequilla crema alta sal:</span>
+                    <strong class="text-error">640mg Na</strong>
+                  </div>
+                </div>
+              </div>
+              <!-- Clinical Optimized Baleada -->
+              <div class="p-space-sm bg-primary-container/10 rounded-lg">
+                <div class="flex items-center justify-between text-primary text-label-sm mb-1">
+                  <span>Baleada Clínica Pro</span>
+                  <span class="font-bold text-primary">Protocolo Óptimo</span>
+                </div>
+                <div class="text-headline-sm font-extrabold text-primary mb-2">
+                  490 <span class="text-body-sm font-normal text-outline">kcal</span>
+                </div>
+                <div class="space-y-1 text-body-sm text-on-surface-variant">
+                  <div class="flex justify-between">
+                    <span>Tortilla comal al vapor:</span>
+                    <strong class="text-on-surface">44g CHO</strong>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Frijoles parados licuados con ajo:</span>
+                    <strong class="text-primary">12g Fibra</strong>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Huevo revuelto + Cuajada seca:</span>
+                    <strong class="text-primary">26g Prot</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Micro Bioimpedance Progress Sparkline Card -->
+          <div
+            class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm flex flex-col justify-between"
+          >
+            <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true"
+                  >monitor_weight</span
+                >
+                <span class="text-title-sm text-on-surface"
+                  >Curva de Grasa Visceral &amp; Adherencia (InBody 270)</span
+                >
+              </div>
+              <span class="font-code-data text-code-data text-primary font-bold"
+                >-4.2% Grasa en 6 semanas</span
+              >
+            </div>
+            <!-- Inline SVG Sparkline -->
+            <div class="w-full h-16 pt-1">
+              <svg class="w-full h-full" fill="none" viewbox="0 0 500 60">
+                <path
+                  d="M 0,45 Q 120,40 240,25 T 500,10"
+                  fill="none"
+                  stroke="#10b981"
+                  stroke-linecap="round"
+                  stroke-width="3"></path>
+                <path
+                  d="M 0,45 Q 120,40 240,25 T 500,10 L 500,60 L 0,60 Z"
+                  fill="url(#gradientMint)"
+                  opacity="0.15"></path>
+                <circle cx="500" cy="10" fill="#006c49" r="4"></circle>
+                <circle cx="240" cy="25" fill="#10b981" r="4"></circle>
+                <circle cx="0" cy="45" fill="#6c7a71" r="4"></circle>
+                <defs>
+                  <lineargradient id="gradientMint" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#10b981"></stop>
+                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0"></stop>
+                  </lineargradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="flex justify-between text-label-sm text-outline pt-2">
+              <span>Semana 1: 19.8% (Inicio)</span>
+              <span>Semana 3: 17.6% (Adaptación TCA)</span>
+              <span class="text-primary font-semibold">Semana 6: 15.6% (Objetivo)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

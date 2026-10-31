@@ -1,0 +1,118 @@
+---
+import HeroProduct from './HeroProduct.astro';
+---
+
+<!-- Hero (port 1:1 de docs/design/stitch-landing.html, bytes 8303-12442) -->
+<section
+  id="inicio"
+  class="relative w-full overflow-hidden bg-gradient-to-b from-surface to-surface-container-low/40 pb-space-2xl"
+>
+  <div
+    class="absolute -top-36 left-1/2 -translate-x-1/2 w-[760px] h-[340px] bg-primary-container/10 rounded-full blur-3xl pointer-events-none"
+  >
+  </div>
+  <div class="max-w-7xl mx-auto px-gutter-desktop pt-space-xl">
+    <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
+      <!-- Top Pill Badge -->
+      <div
+        class="inline-flex items-center gap-space-xs bg-surface-container px-space-md py-space-xs rounded-full shadow-sm mb-space-md"
+      >
+        <span class="text-[14px]">🚀</span>
+        <span class="text-label-lg text-primary tracking-wide"
+          >El 1er Software Nutricional Clínico Diseñado para Honduras · 100% Gastronomía Local</span
+        >
+      </div>
+      <!-- Main Headline -->
+      <h1
+        class="text-display-lg text-on-surface font-extrabold tracking-tight max-w-3xl mb-space-md"
+      >
+        Multiplica la adherencia de tus pacientes <span
+          class="text-primary underline decoration-primary-container/50 decoration-wavy decoration-2"
+          >sin prohibir</span
+        > la comida hondureña.
+      </h1>
+      <!-- Subhead -->
+      <p
+        class="text-body-lg text-on-surface-variant max-w-2xl mb-space-xl leading-relaxed"
+      >
+        El software clínico que reemplaza las dietas extranjeras restrictivas con
+        reingeniería nutricional de baleadas, casamiento y alimentos locales respaldados
+        por la tabla <strong class="text-on-surface font-semibold">TCA-HN</strong>,
+        integración bioimpedancia <strong class="text-on-surface font-semibold"
+          >InBody</strong
+        > y bot de WhatsApp (+504).
+      </p>
+      <!-- CTA Form Group -->
+      <div
+        class="flex flex-col sm:flex-row items-center gap-space-sm w-full justify-center mb-space-sm"
+      >
+        <a
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs h-12 px-space-xl rounded-lg text-title-sm text-on-primary bg-primary-container hover:bg-primary transition-all shadow-[0_4px_16px_rgba(16,185,129,0.28)]"
+         
+          href="#planes"
+        >
+          <span class="material-symbols-outlined text-[20px]" aria-hidden="true"
+            >bolt</span
+          >
+          <span>Comenzar Prueba Gratis (14 Días)</span>
+        </a>
+        <a
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs h-12 px-space-lg rounded-lg text-title-sm text-on-surface bg-surface-container-lowest hover:bg-surface-container shadow-sm transition-all"
+         
+          href="#planes"
+        >
+          <span
+            class="material-symbols-outlined text-[20px] text-primary"
+            aria-hidden="true">calendar_month</span
+          >
+          <span>Agendar Demo con Especialista</span>
+        </a>
+      </div>
+      <p
+        class="text-body-sm text-outline flex items-center gap-space-xs mb-space-2xl"
+      >
+        <span class="material-symbols-outlined text-[16px] text-primary" aria-hidden="true"
+          >verified_user</span
+        >
+        <span
+          >Sin tarjeta de crédito requerida · Cumple normativas tributarias y clínicas SAR
+          &amp; CAI</span
+        >
+      </p>
+      <!-- Social Proof Stats -->
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 gap-space-md w-full max-w-4xl p-space-md bg-surface-container-lowest rounded-xl shadow-sm mb-space-xl"
+      >
+        <div class="flex flex-col items-center justify-center p-space-xs">
+          <span class="text-headline-md font-extrabold text-on-surface">120+</span>
+          <span
+            class="text-label-sm text-outline uppercase tracking-wider text-center"
+            >Nutricionistas HN</span
+          >
+        </div>
+        <div class="flex flex-col items-center justify-center p-space-xs">
+          <span class="text-headline-md font-extrabold text-primary">+88%</span>
+          <span
+            class="text-label-sm text-outline uppercase tracking-wider text-center"
+            >Adherencia Sostenida</span
+          >
+        </div>
+        <div class="flex flex-col items-center justify-center p-space-xs">
+          <span class="text-headline-md font-extrabold text-on-surface">480+</span>
+          <span
+            class="text-label-sm text-outline uppercase tracking-wider text-center"
+            >Platos Calibrados HN</span
+          >
+        </div>
+        <div class="flex flex-col items-center justify-center p-space-xs">
+          <span class="text-headline-md font-extrabold text-secondary">99.4%</span>
+          <span
+            class="text-label-sm text-outline uppercase tracking-wider text-center"
+            >Retención Pacientes</span
+          >
+        </div>
+      </div>
+    </div>
+    <HeroProduct />
+  </div>
+</section>
