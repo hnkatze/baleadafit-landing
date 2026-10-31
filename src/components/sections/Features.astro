@@ -1,0 +1,111 @@
+---
+// Port 1:1 de la sección "Suite médica" del mock de Stitch
+// (docs/design/stitch-landing.html, bytes 24799–31142).
+// Sin lógica: markup estático. Clases `font-<token>` eliminadas (la familia
+// la aporta `body`); tokens de tamaño, espaciado y color conservados.
+---
+
+<section id="gastronomia" class="w-full py-space-2xl bg-surface-container-low/50">
+  <div class="max-w-7xl mx-auto px-gutter-desktop">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+      <div>
+        <span class="text-label-lg uppercase tracking-wider text-primary font-bold">
+          Tecnología Clínica Diferencial
+        </span>
+        <h2 class="text-headline-lg font-bold text-on-surface mt-space-xs max-w-xl">
+          La suite médica que comprende el paladar y la realidad económica de Honduras
+        </h2>
+      </div>
+      <div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-xs rounded-full shadow-sm">
+        <span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">verified</span>
+        <span class="text-body-sm font-medium text-on-surface">Validado con tablas INCAP y TCA-HN</span>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+      <!-- Feature 1 -->
+      <div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-space-md">
+            <div class="w-12 h-12 rounded-xl bg-primary-container/20 text-primary flex items-center justify-center">
+              <span class="material-symbols-outlined text-[28px]" aria-hidden="true">menu_book</span>
+            </div>
+            <span class="font-code-data text-code-data text-outline font-semibold">TCA-HN v3.4</span>
+          </div>
+          <h3 class="text-headline-sm font-bold text-on-surface mb-space-xs">
+            Motor Bromatológico TCA-HN Exclusivo
+          </h3>
+          <p class="text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+            Más de 480 platos e ingredientes autóctonos analizados en laboratorio: desde yuca con chicharrón, tapado olanchano, baleadas con cuajada, hasta sopa de caracol y montucas. Desglose milimétrico de macro y micronutrientes, sodio, fibra y carga glucémica.
+          </p>
+        </div>
+        <div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+          <span class="text-body-sm text-on-surface font-medium">Búsqueda rápida en consulta:</span>
+          <span class="font-code-data text-code-data text-primary font-semibold">&lt; 0.2 segundos</span>
+        </div>
+      </div>
+      <!-- Feature 2 -->
+      <div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-space-md">
+            <div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center justify-center">
+              <span class="material-symbols-outlined text-[28px]" aria-hidden="true">photo_camera</span>
+            </div>
+            <span class="text-label-sm bg-primary/10 text-primary px-3 py-1 rounded-full font-bold">Motor IA Visión</span>
+          </div>
+          <h3 class="text-headline-sm font-bold text-on-surface mb-space-xs">
+            Auditoría Fotográfica con IA para Comida HN
+          </h3>
+          <p class="text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+            El paciente envía una foto de su almuerzo por la app o WhatsApp. Nuestra inteligencia artificial reconoce porciones de frijoles, arroz, plátano frito o asado, alertando discrepancias calóricas en tiempo real a tu expediente médico.
+          </p>
+        </div>
+        <div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+          <span class="text-body-sm text-on-surface font-medium">Precisión de detección local:</span>
+          <span class="font-code-data text-code-data text-primary font-semibold">96.8% en platos típicos</span>
+        </div>
+      </div>
+      <!-- Feature 3 -->
+      <div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-space-md">
+            <div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+              <span class="material-symbols-outlined text-[28px]" aria-hidden="true">forward_to_inbox</span>
+            </div>
+            <span class="font-code-data text-code-data text-outline font-semibold">Meta Business API (+504)</span>
+          </div>
+          <h3 class="text-headline-sm font-bold text-on-surface mb-space-xs">
+            Asistente Automatizado WhatsApp (+504)
+          </h3>
+          <p class="text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+            Reduce la inasistencia a consulta en un 73%. Envíos automáticos de recordatorios con instrucciones previas para pesaje InBody (ayuno, hidratación), minutas semanales en PDF interactivo y mensajes de soporte psicológico-conductual.
+          </p>
+        </div>
+        <div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+          <span class="text-body-sm text-on-surface font-medium">Tasa de apertura en pacientes HN:</span>
+          <span class="font-code-data text-code-data text-primary font-semibold">98.2% vs 14% de correo</span>
+        </div>
+      </div>
+      <!-- Feature 4 -->
+      <div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-space-md">
+            <div class="w-12 h-12 rounded-xl bg-surface-container-highest text-on-surface flex items-center justify-center">
+              <span class="material-symbols-outlined text-[28px]" aria-hidden="true">devices</span>
+            </div>
+            <span class="text-label-sm bg-surface-container text-outline px-3 py-1 rounded-full font-bold">Bluetooth &amp; Cloud</span>
+          </div>
+          <h3 class="text-headline-sm font-bold text-on-surface mb-space-xs">
+            Expediente Clínico &amp; Bioimpedancia Directa
+          </h3>
+          <p class="text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+            Sincronización instantánea con analizadores InBody (120, 270, 570), Tanita y básculas inteligentes. Gráficas evolutivas claras de masa magra segmentaria, agua intracelular y grasa visceral listas para imprimir o enviar.
+          </p>
+        </div>
+        <div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+          <span class="text-body-sm text-on-surface font-medium">Exportación para historia médica:</span>
+          <span class="font-code-data text-code-data text-primary font-semibold">1-Click PDF Acreditado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
