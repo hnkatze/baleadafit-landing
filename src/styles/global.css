@@ -137,6 +137,10 @@
   --text-code-data--letter-spacing: -0.01em;
   --text-code-data--font-weight: 500;
 
+  /* Anchos de contenedor para pantallas grandes */
+  --container-8xl: 85rem;
+  --container-9xl: 100rem;
+
   /* Espaciado */
   --spacing-space-xs: 0.25rem;
   --spacing-space-sm: 0.5rem;
