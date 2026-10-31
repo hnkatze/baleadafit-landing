@@ -137,6 +137,10 @@
   --text-code-data--letter-spacing: -0.01em;
   --text-code-data--font-weight: 500;
 
+  /* Curvas de movimiento (easing.dev) */
+  --ease-swift: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-move: cubic-bezier(0.77, 0, 0.175, 1);
+
   /* Anchos de contenedor para pantallas grandes */
   --container-8xl: 85rem;
   --container-9xl: 100rem;
@@ -188,4 +192,95 @@
       transition-duration: 0.01ms !important;
     }
   }
+}
+
+/*
+ * Movimiento.
+ * Gate: landing de marketing = primera visita, el presupuesto de deleite aplica.
+ * Propósito: explicación (guiar la lectura hacia abajo) y deleite en hero/gráfica.
+ * Sólo transform y opacity; nada de layout.
+ */
+@layer components {
+  /* Revelado al entrar en pantalla. El estado oculto lo pone el CSS, no el JS:
+     así no hay parpadeo entre el primer paint y el observer. */
+  @media (prefers-reduced-motion: no-preference) {
+    main > section > * > * {
+      --reveal-delay: 0ms;
+      opacity: 0;
+      transform: translateY(20px);
+      transition:
+        opacity 560ms var(--ease-swift) var(--reveal-delay),
+        transform 560ms var(--ease-swift) var(--reveal-delay);
+    }
+
+    main > section > * > *:nth-child(2) {
+      --reveal-delay: 70ms;
+    }
+    main > section > * > *:nth-child(3) {
+      --reveal-delay: 140ms;
+    }
+    main > section > * > *:nth-child(4) {
+      --reveal-delay: 210ms;
+    }
+    main > section > * > *:nth-child(n + 5) {
+      --reveal-delay: 280ms;
+    }
+
+    main > section.is-in > * > * {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Curva de grasa visceral: se dibuja cuando el hero entra. */
+    [data-chart-line] {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      transition: stroke-dashoffset 900ms var(--ease-swift) 260ms;
+    }
+
+    [data-chart-area] {
+      opacity: 0;
+      transition: opacity 700ms var(--ease-swift) 420ms;
+    }
+
+    main > section.is-in [data-chart-line] {
+      stroke-dashoffset: 0;
+    }
+
+    main > section.is-in [data-chart-area] {
+      opacity: 1;
+    }
+  }
+}
+
+/* El header gana profundidad al despegarse del tope. */
+header {
+  transition: box-shadow 200ms var(--ease-swift);
+}
+
+header[data-scrolled='true'] {
+  box-shadow: 0 2px 18px rgba(15, 23, 42, 0.08);
+}
+
+/* Feedback de presión: vale para mouse y para dedo, no se gatea por hover. */
+main a[href],
+main button {
+  transition: transform 120ms var(--ease-swift);
+}
+
+main a[href]:active,
+main button:active {
+  transform: scale(0.97);
+}
+
+/* Cambio de precio sin teleport: transición, no keyframes. */
+.price-value {
+  transition:
+    opacity 140ms var(--ease-swift),
+    transform 140ms var(--ease-swift);
+}
+
+.price-value.is-swapping {
+  opacity: 0;
+  transform: translateY(-4px);
 }
