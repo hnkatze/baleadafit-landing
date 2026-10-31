@@ -47,7 +47,7 @@ import HeroProduct from './HeroProduct.astro';
         class="flex flex-col sm:flex-row items-center gap-space-sm w-full justify-center mb-space-sm"
       >
         <a
-          class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs h-12 px-space-xl rounded-lg text-title-sm text-on-primary bg-primary-container hover:bg-primary transition-all shadow-[0_4px_16px_rgba(16,185,129,0.28)]"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs h-12 px-space-xl rounded-lg text-title-sm text-on-primary bg-primary-container hover:bg-primary transition shadow-[0_4px_16px_rgba(16,185,129,0.28)]"
          
           href="#planes"
         >
@@ -57,7 +57,7 @@ import HeroProduct from './HeroProduct.astro';
           <span>Comenzar Prueba Gratis (14 Días)</span>
         </a>
         <a
-          class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs h-12 px-space-lg rounded-lg text-title-sm text-on-surface bg-surface-container-lowest hover:bg-surface-container shadow-sm transition-all"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs h-12 px-space-lg rounded-lg text-title-sm text-on-surface bg-surface-container-lowest hover:bg-surface-container shadow-sm transition"
          
           href="#planes"
         >
@@ -84,28 +84,28 @@ import HeroProduct from './HeroProduct.astro';
         class="grid grid-cols-2 md:grid-cols-4 gap-space-md w-full max-w-4xl xl:max-w-5xl 2xl:max-w-6xl p-space-md bg-surface-container-lowest rounded-xl shadow-sm mb-space-2xl"
       >
         <div class="flex flex-col items-center justify-center p-space-xs">
-          <span class="text-headline-md font-extrabold text-on-surface">120+</span>
+          <span class="text-headline-md font-extrabold text-on-surface" data-count-to="120" data-count-suffix="+">120+</span>
           <span
             class="text-label-sm text-outline uppercase tracking-wider text-center"
             >Nutricionistas HN</span
           >
         </div>
         <div class="flex flex-col items-center justify-center p-space-xs">
-          <span class="text-headline-md font-extrabold text-primary">+88%</span>
+          <span class="text-headline-md font-extrabold text-primary" data-count-to="88" data-count-prefix="+" data-count-suffix="%">+88%</span>
           <span
             class="text-label-sm text-outline uppercase tracking-wider text-center"
             >Adherencia Sostenida</span
           >
         </div>
         <div class="flex flex-col items-center justify-center p-space-xs">
-          <span class="text-headline-md font-extrabold text-on-surface">480+</span>
+          <span class="text-headline-md font-extrabold text-on-surface" data-count-to="480" data-count-suffix="+">480+</span>
           <span
             class="text-label-sm text-outline uppercase tracking-wider text-center"
             >Platos Calibrados HN</span
           >
         </div>
         <div class="flex flex-col items-center justify-center p-space-xs">
-          <span class="text-headline-md font-extrabold text-secondary">99.4%</span>
+          <span class="text-headline-md font-extrabold text-secondary" data-count-to="99.4" data-count-decimals="1" data-count-suffix="%">99.4%</span>
           <span
             class="text-label-sm text-outline uppercase tracking-wider text-center"
             >Retención Pacientes</span
@@ -116,3 +116,54 @@ import HeroProduct from './HeroProduct.astro';
     <HeroProduct />
   </div>
 </section>
+
+<script>
+  // Contadores de la barra de métricas: una sola pasada, y sólo si el usuario acepta movimiento.
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const counters = document.querySelectorAll('[data-count-to]');
+
+  if (!prefersReducedMotion && counters.length && 'IntersectionObserver' in window) {
+    const DURATION = 1100;
+
+    const format = (value, decimals) =>
+      value.toLocaleString('es-HN', {
+        minimumFractionDigits: decimals,
+        maximumFractionDigits: decimals,
+      });
+
+    const run = (el) => {
+      const target = Number(el.dataset.countTo);
+      const decimals = Number(el.dataset.countDecimals ?? 0);
+      const prefix = el.dataset.countPrefix ?? '';
+      const suffix = el.dataset.countSuffix ?? '';
+      const started = performance.now();
+
+      const tick = (now) => {
+        const progress = Math.min(1, (now - started) / DURATION);
+        const eased = 1 - (1 - progress) ** 3;
+        el.textContent = prefix + format(target * eased, decimals) + suffix;
+
+        if (progress < 1) {
+          requestAnimationFrame(tick);
+        } else {
+          el.textContent = prefix + format(target, decimals) + suffix;
+        }
+      };
+
+      requestAnimationFrame(tick);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          run(entry.target);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.6 },
+    );
+
+    counters.forEach((counter) => observer.observe(counter));
+  }
+</script>

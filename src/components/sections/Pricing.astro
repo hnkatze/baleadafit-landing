@@ -20,7 +20,7 @@
           type="button"
           data-billing="monthly"
           aria-pressed="true"
-          class="px-space-md py-1.5 rounded-full text-title-sm text-on-surface bg-surface-container-lowest shadow-sm transition-all"
+          class="px-space-md py-1.5 rounded-full text-title-sm text-on-surface bg-surface-container-lowest shadow-sm transition"
         >
           Facturación Mensual
         </button>
@@ -28,7 +28,7 @@
           type="button"
           data-billing="annual"
           aria-pressed="false"
-          class="px-space-md py-1.5 rounded-full text-title-sm text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1"
+          class="px-space-md py-1.5 rounded-full text-title-sm text-on-surface-variant hover:text-on-surface transition flex items-center gap-1"
         >
           <span>Facturación Anual</span>
           <span class="text-label-sm bg-primary-container text-on-primary px-2 py-0.5 rounded-full">Ahorra 20%</span>
@@ -44,13 +44,13 @@
           <div class="mb-space-lg">
             <div class="flex items-baseline gap-1">
               <span
-                class="text-display-lg font-extrabold text-on-surface"
+                class="price-value text-display-lg font-extrabold text-on-surface"
                 data-price-monthly="L. 750"
                 data-price-annual="L. 600">L. 750</span>
               <span class="text-body-sm text-outline">/ mes</span>
             </div>
             <span
-              class="text-label-sm text-outline"
+              class="price-value text-label-sm text-outline"
               data-sub-monthly="O $30 USD facturados mensualmente"
               data-sub-annual="L. 7,200 HNL / año ($24 USD/mes facturado anual)">O $30 USD facturados mensualmente</span>
           </div>
@@ -62,7 +62,7 @@
             <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check_circle</span>Cobros por Transferencia ACH Honduras</div>
           </div>
         </div>
-        <a class="w-full inline-flex items-center justify-center h-11 px-space-md rounded-lg text-title-sm text-on-surface bg-surface-container hover:bg-surface-container-high transition-all" href="#planes">
+        <a class="w-full inline-flex items-center justify-center h-11 px-space-md rounded-lg text-title-sm text-on-surface bg-surface-container hover:bg-surface-container-high transition" href="#planes">
           Comenzar con Nutri Individual
         </a>
       </div>
@@ -77,13 +77,13 @@
           <div class="mb-space-lg">
             <div class="flex items-baseline gap-1">
               <span
-                class="text-display-lg font-extrabold text-primary"
+                class="price-value text-display-lg font-extrabold text-primary"
                 data-price-monthly="L. 1,450"
                 data-price-annual="L. 1,160">L. 1,450</span>
               <span class="text-body-sm text-outline">/ mes</span>
             </div>
             <span
-              class="text-label-sm text-outline"
+              class="price-value text-label-sm text-outline"
               data-sub-monthly="O $59 USD facturados mensualmente"
               data-sub-annual="L. 13,920 HNL / año ($47 USD/mes facturado anual)">O $59 USD facturados mensualmente</span>
           </div>
@@ -96,7 +96,7 @@
             <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check_circle</span>2 Licencias para nutricionistas incluidas</div>
           </div>
         </div>
-        <a class="w-full inline-flex items-center justify-center h-11 px-space-md rounded-lg text-title-sm text-on-primary bg-primary-container hover:bg-primary transition-all shadow-[0_4px_12px_rgba(16,185,129,0.25)]" href="#planes">
+        <a class="w-full inline-flex items-center justify-center h-11 px-space-md rounded-lg text-title-sm text-on-primary bg-primary-container hover:bg-primary transition shadow-[0_4px_12px_rgba(16,185,129,0.25)]" href="#planes">
           Elegir Clínica Pro (14 Días Gratis)
         </a>
       </div>
@@ -108,13 +108,13 @@
           <div class="mb-space-lg">
             <div class="flex items-baseline gap-1">
               <span
-                class="text-display-lg font-extrabold text-on-surface"
+                class="price-value text-display-lg font-extrabold text-on-surface"
                 data-price-monthly="L. 2,900"
                 data-price-annual="L. 2,320">L. 2,900</span>
               <span class="text-body-sm text-outline">/ mes</span>
             </div>
             <span
-              class="text-label-sm text-outline"
+              class="price-value text-label-sm text-outline"
               data-sub-monthly="O $119 USD facturados mensualmente"
               data-sub-annual="L. 27,840 HNL / año ($95 USD/mes facturado anual)">O $119 USD facturados mensualmente</span>
           </div>
@@ -126,7 +126,7 @@
             <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check_circle</span>Soporte clínico prioritario VIP 24/7 vía WhatsApp</div>
           </div>
         </div>
-        <a class="w-full inline-flex items-center justify-center h-11 px-space-md rounded-lg text-title-sm text-on-surface bg-surface-container hover:bg-surface-container-high transition-all" href="#footer-contacto">
+        <a class="w-full inline-flex items-center justify-center h-11 px-space-md rounded-lg text-title-sm text-on-surface bg-surface-container hover:bg-surface-container-high transition" href="#footer-contacto">
           Contactar Ventas Corporativas
         </a>
       </div>
@@ -146,12 +146,21 @@
       button.classList.add(...(isActive ? ACTIVE_CLASSES : IDLE_CLASSES));
     });
 
+    const swap = (node, next) => {
+      if (node.textContent === next) return;
+      node.classList.add('is-swapping');
+      window.setTimeout(() => {
+        node.textContent = next;
+        node.classList.remove('is-swapping');
+      }, 140);
+    };
+
     root.querySelectorAll('[data-price-monthly]').forEach((price) => {
-      price.textContent = mode === 'annual' ? price.dataset.priceAnnual : price.dataset.priceMonthly;
+      swap(price, mode === 'annual' ? price.dataset.priceAnnual : price.dataset.priceMonthly);
     });
 
     root.querySelectorAll('[data-sub-monthly]').forEach((sub) => {
-      sub.textContent = mode === 'annual' ? sub.dataset.subAnnual : sub.dataset.subMonthly;
+      swap(sub, mode === 'annual' ? sub.dataset.subAnnual : sub.dataset.subMonthly);
     });
   };
 
