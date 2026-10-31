@@ -39,6 +39,7 @@ Repo propio (`github.com/hnkatze/baleadafit-landing`), en paralelo al portal (`b
 - [ ] T13 · S3,S4 · README del repo y cierre de la feature
 - [x] T15 · S7 · ritmo vertical: tokens `space-3xl`/`space-4xl`, secciones a 80 px (mobile) / 96 px (desktop), grids y padding de tarjetas más abiertos, mockup del hero intacto · commit `b4fdcb4`
 - [x] T16 · S8 · navbar en una línea: links con `whitespace-nowrap`, CTA secundaria recién desde `2xl`, holguras entre bloques del header · commit `57c2bec`
+- [x] T20 · S9/S10 · verificación con Lighthouse y correcciones de accesibilidad: contraste del token `outline`, orden de encabezados y pareja de tokens en las CTA emerald · commits `87885f0`, `24e68e8`
 
 ## Log
 
@@ -93,3 +94,13 @@ Decisiones de port documentadas en `docs/design/landing.md`: clases `font-<token
 **L23** — Scroll animation real: `@supports (animation-timeline: view())` habilita `row-in` (filas de sección, `animation-range: entry 6% cover 30%`) y `card-rise` (cascada por tarjeta con rangos escalonados 2/5/8/11 %). Verificado en Chrome: con la sección a medio entrar, las tarjetas 1 y 2 están en opacidad 1.00, la 3 y la 4 en 0.00, y la fila de abajo en 0.68; al volver al tope las filas bajan de nuevo a 0.00, o sea que avanza y retrocede con el scroll. Navegadores sin view timelines conservan el revelado por `IntersectionObserver` y el barrido por `.is-in`.
 
 **L24** — Verificación de accesibilidad del movimiento: con `prefers-reduced-motion: reduce` emulado, las 16 filas quedan visibles (`hiddenRows: 0`) y el `::before` de las tarjetas sin animación. Build limpio y CSS construido con `@property --card-angle`, `card-sweep`, `card-rise`, `row-in` y `mask-composite`.
+
+**L25** — El `git push` del cierre de S10 falló con `Could not resolve host: github.com` (DNS transitorio). Reintentado sin tocar nada más: `cf15f05..a73f5c8` pusheado OK.
+
+**L26** — Lighthouse desktop sobre la landing: antes 94 / 100 / 100 / 97. Fallas reales y sus arreglos:
+1. **Contraste del token `--color-outline`** en 7 nodos (4.29:1 y 3.98:1 sobre `#f9f9ff` y `#f0f3ff`): el token baja a `#5f6d64`, que da 5.19 / 4.92 / 4.95 sin cambiar el tono. Commit `87885f0`.
+2. **Orden de encabezados**: el mockup del hero metía un `<h4>` justo debajo del `<h1>`. Pasó a `<div>` con las mismas clases, porque es una etiqueta dentro de una captura de producto, no un encabezado del documento. Commit `87885f0`.
+3. **CTA emerald a 2.53:1** (blanco sobre `#10b981`) en 2 nodos: el dueño eligió mantener el verde de marca y pasar el texto a `text-on-primary-container` (`#00422b` = 4.56:1), que es la pareja que el propio design system define. El hover ahora aclara (`#34d399` = 6.02:1) en vez de oscurecer, porque `#00422b` sobre `#006c49` daría 1.79:1. Commit `24e68e8`.
+Resultado: **Accesibilidad 100**, Best Practices 100, SEO 100.
+
+**L27** — Queda un solo hallazgo: CLS 0.082, bajo el umbral de 0.1 que Lighthouse considera bueno. Viene del intercambio de la tipografía web (Plus Jakarta Sans), no de las animaciones: el revelado sólo usa `opacity` y `transform`, que no disparan layout shift.
