@@ -381,20 +381,32 @@ main button:active {
 }
 
 /* Con soporte de animaciones atadas al scroll, el revelado y el barrido dependen
-   de la posición: avanzan y retroceden con el scroll en vez de disparar una vez. */
+   de la posición: avanzan y retroceden con el scroll en vez de disparar una vez.
+
+   OJO: acá nunca se escribe el shorthand `animation` junto a `animation-timeline`
+   en la misma regla. Lightning CSS los fusiona en `animation: linear both row-in
+   view()` y ninguno de los navegadores que soportan view() acepta `view()` dentro
+   del shorthand: la declaración entera se descarta y el contenido queda invisible.
+   Por eso van todos los longhands. Misma razón para no volver a poner `opacity: 0`
+   acá: el estado oculto lo aporta el `both` del keyframe, así una timeline inactiva
+   (por ejemplo bajo un `overflow: hidden` que no scrollea) degrada a visible y no
+   a página en blanco. */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     main > section > * > * {
-      opacity: 0;
       transform: none;
       transition: none;
-      animation: row-in linear both;
+      animation-name: row-in;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
       animation-timeline: view();
       animation-range: entry 6% cover 30%;
     }
 
     main > section .card-glow::before {
-      animation: card-sweep linear both;
+      animation-name: card-sweep;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
       animation-timeline: view();
       animation-range: entry 12% entry 82%;
     }
@@ -420,8 +432,9 @@ main button:active {
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     main > section .card-glow {
-      animation: card-rise linear both;
-      animation-delay: 0s;
+      animation-name: card-rise;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
       animation-timeline: view();
       animation-range: entry 2% cover 22%;
     }
