@@ -19,6 +19,9 @@ Repo propio (`github.com/hnkatze/baleadafit-landing`), en paralelo al portal (`b
 - [x] T17 · S9 · sistema de movimiento: tokens de easing, revelado por sección con stagger, sombra del header al scrollear, feedback de presión · commit `fb910e1`
 - [x] T18 · S9 · movimiento con datos: contadores del hero, dibujo de la curva de grasa visceral y fade del toggle de precios · commit pendiente
 
+- **S10** — "bordes animados de cards, cosas asi, que sean animaciones por view de la section, asi tendremos scroll animation nose": bordes animados en las tarjetas y movimiento atado a la posición del scroll (view timeline), no sólo un disparo único al entrar.
+- [x] T19 · S10 · bordes animados de tarjetas (barrido al entrar + anillo girando al hover) y revelado/cascada atados a `animation-timeline: view()` con fallback por `IntersectionObserver` · commit `738a284`
+
 ## Tasks
 
 - [x] T1 · S1,S6 · base: tokens del sistema de diseño en `global.css`, `Layout.astro` (lang es, fuentes, meta), assets de marca en `public/brand`, referencia de diseño en `docs/design` · commit `feat: bootstrap landing shell with Stitch design tokens`
@@ -82,3 +85,11 @@ Decisiones de port documentadas en `docs/design/landing.md`: clases `font-<token
 **L19** — Ingredientes: sólo `transform` y `opacity`; curvas `--ease-swift: cubic-bezier(0.23,1,0.32,1)` (entradas) y `--ease-move` (movimiento en pantalla); revelado 560 ms con stagger de 70 ms tope 280 ms; contadores 1100 ms con ease-out cúbica; dibujo de la curva 900 ms por `stroke-dashoffset`; cambio de precio 140 ms con transición (no keyframes); feedback de presión 120 ms `scale(0.97)`.
 
 **L20** — El estado oculto lo define el CSS y no el JS (`main > section > * > *`), así no hay parpadeo entre el primer paint y el observer; `IntersectionObserver` sólo agrega `.is-in`. Verificado en navegador: sección fuera de pantalla en `opacity: 0` + `translateY(20px)` que pasa a `opacity: 1` / `transform: none` con delays 0 s, 0.07 s; con `prefers-reduced-motion: reduce` emulado las siete secciones quedan visibles al instante y la curva ya está dibujada; el toggle deja el texto viejo durante los 140 ms y después muestra `L. 600 / 1,160 / 2,320` con sus subtítulos. También se cambió el `transition-all` del mock por `transition` (propiedades nombradas) en seis componentes.
+
+**L21** — "bordes animados de cards, cosas asi, que sean animaciones por view de la section, asi tendremos scroll animation nose"
+
+**L22** — Bordes: pseudo-elemento de 1 px enmascarado (`mask-composite: exclude`) con `conic-gradient` sobre `@property --card-angle` (registrada como `<angle>`, si no interpola de golpe). Barrido de 1050 ms al entrar en cuadro y anillo girando a 4 s lineales sólo mientras el puntero está encima, gateado por `@media (hover: hover) and (pointer: fine)`. 16 tarjetas etiquetadas con `.card-glow` en Problema, Features, ROI, Planes y Testimonios (el mockup del hero queda afuera a propósito: contiene datos que el usuario lee).
+
+**L23** — Scroll animation real: `@supports (animation-timeline: view())` habilita `row-in` (filas de sección, `animation-range: entry 6% cover 30%`) y `card-rise` (cascada por tarjeta con rangos escalonados 2/5/8/11 %). Verificado en Chrome: con la sección a medio entrar, las tarjetas 1 y 2 están en opacidad 1.00, la 3 y la 4 en 0.00, y la fila de abajo en 0.68; al volver al tope las filas bajan de nuevo a 0.00, o sea que avanza y retrocede con el scroll. Navegadores sin view timelines conservan el revelado por `IntersectionObserver` y el barrido por `.is-in`.
+
+**L24** — Verificación de accesibilidad del movimiento: con `prefers-reduced-motion: reduce` emulado, las 16 filas quedan visibles (`hiddenRows: 0`) y el `::before` de las tarjetas sin animación. Build limpio y CSS construido con `@property --card-angle`, `card-sweep`, `card-rise`, `row-in` y `mask-composite`.
