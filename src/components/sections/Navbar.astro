@@ -12,9 +12,9 @@ const navLinks = [
   class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"
 >
   <div
-    class="h-20 w-full px-gutter-desktop max-w-7xl mx-auto flex items-center justify-between gap-space-md"
+    class="h-20 w-full px-gutter-desktop max-w-7xl mx-auto flex items-center justify-between gap-space-sm"
   >
-    <div class="flex items-center gap-space-md shrink-0">
+    <div class="flex items-center gap-space-sm shrink-0">
       <img
         src="/brand/baleadafit-lockup.png"
         alt="BaleadaFit Pro"
@@ -35,7 +35,7 @@ const navLinks = [
       {
         navLinks.map((link) => (
           <a
-            class="px-space-sm py-space-xs text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors"
+            class="px-space-sm py-space-xs text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors whitespace-nowrap"
             href={link.href}
           >
             {link.label}
@@ -46,7 +46,7 @@ const navLinks = [
 
     <div class="flex items-center gap-space-sm shrink-0">
       <a
-        class="hidden sm:inline-flex items-center justify-center h-10 px-space-md rounded-lg text-title-sm text-on-surface bg-surface-container-lowest shadow-[0_1px_3px_0_rgba(15,23,42,0.05)] hover:bg-surface-container-low hover:text-on-surface transition-all"
+        class="hidden 2xl:inline-flex items-center justify-center h-10 px-space-md rounded-lg text-title-sm text-on-surface bg-surface-container-lowest shadow-[0_1px_3px_0_rgba(15,23,42,0.05)] hover:bg-surface-container-low hover:text-on-surface transition-all"
         href="#planes">Ver Demo Interactiva</a
       >
       <a
