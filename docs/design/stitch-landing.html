@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>BaleadaFit Pro - Clinical SaaS Nutrition Platform</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-highest":"#d8e3fb","surface-container":"#e7eeff","inverse-surface":"#263143","primary":"#006c49","on-primary-container":"#00422b","error-container":"#ffdad6","on-error":"#ffffff","on-tertiary-fixed-variant":"#005137","error":"#ba1a1a","outline":"#6c7a71","on-surface":"#111c2d","on-secondary":"#ffffff","on-secondary-fixed-variant":"#00513b","on-error-container":"#93000a","tertiary-container":"#00b982","surface-dim":"#cfdaf2","on-primary-fixed-variant":"#005236","inverse-on-surface":"#ecf1ff","on-secondary-fixed":"#002116","on-tertiary-fixed":"#002114","primary-container":"#10b981","surface-container-low":"#f0f3ff","on-primary":"#ffffff","on-background":"#111c2d","on-surface-variant":"#3c4a42","secondary":"#1b6b51","secondary-container":"#a6f2d1","surface-container-lowest":"#ffffff","surface":"#f9f9ff","surface-variant":"#d8e3fb","surface-tint":"#006c49","tertiary":"#006c4b","primary-fixed":"#6ffbbe","secondary-fixed-dim":"#8bd6b6","on-secondary-container":"#237157","on-tertiary":"#ffffff","primary-fixed-dim":"#4edea3","outline-variant":"#bbcabf","surface-container-high":"#dee8ff","tertiary-fixed":"#68fcbf","on-tertiary-container":"#00422c","surface-bright":"#f9f9ff","background":"#f9f9ff","secondary-fixed":"#a6f2d1","tertiary-fixed-dim":"#45dfa4","inverse-primary":"#4edea3","on-primary-fixed":"#002113"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-sm":"0.5rem","gutter-desktop":"1.5rem","space-md":"1rem","margin-desktop":"2rem","space-xs":"0.25rem","space-2xl":"3rem","space-lg":"1.5rem","margin":"1rem","space-xl":"2rem","margin-tablet":"1.5rem","gutter":"1rem"},fontFamily:{"headline-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"title-sm":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"code-data":["JetBrains Mono"],"headline-lg-mobile":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"]},fontSize:{"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0.005em","fontWeight":"400"}],"label-lg":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"title-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"800"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"code-data":["13px",{"lineHeight":"18px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"display-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"800"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-gutter-desktop max-w-7xl mx-auto flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="Ultra-minimalist modern monogram icon for BaleadaFit Pro, tailored for embroidery on caps and polo shirts. Clean geometry representing a folded baleada arc interlocked with a sleek athletic letter B and pulse beat. Light version.. Brand logo. - Primary color: #10b981
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Uh72fEhCUPoFNEKWQVYPTdM0dTJN0IPjuNxIkwLL5cfox-jZHG5IP4o0WshZctQSsGzgqqSc4bRQRqAfg7HgOk2KksqKVJwyVm2J7B74R3P63QWigsmS0ktzOLuXnmP103hLTh7jUxxXnCUskiN3Wml1YJLFr91OtYvgp7lV47RU2T0CtWdF7dkRUGH4JaCo0_f2bwKIlGUfoU9ehJqT_F3IBgGV4HmjEw1xMOE5m940K0g27E9e37dQ7M"/><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface font-extrabold tracking-tight">BaleadaFit<span class="text-primary"> Pro</span></span><span class="font-label-sm text-label-sm text-outline tracking-wider uppercase hidden sm:inline-block">Clinical Nutrition Suite</span></div></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-lg"><a class="px-space-sm py-space-xs font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="caracteristicas" href="#">Características</a><a class="px-space-sm py-space-xs font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="gastronomia-hn" href="#">Gastronomía HN</a><a class="px-space-sm py-space-xs font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="planes-saas" href="#">Planes SaaS</a><a class="px-space-sm py-space-xs font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="casos-de-exito" href="#">Casos de Éxito</a><a class="px-space-sm py-space-xs font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="calculadora-roi" href="#">Calculadora ROI</a></nav><div class="flex items-center gap-space-sm shrink-0"><a class="hidden sm:inline-flex items-center justify-center h-10 px-space-md rounded-lg font-title-sm text-title-sm text-on-surface bg-surface-container-lowest shadow-[0_1px_3px_0_rgba(15,23,42,0.05)] hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="demo-interactiva" href="#">Ver Demo Interactiva</a><a class="inline-flex items-center justify-center h-10 px-space-md rounded-lg font-title-sm text-title-sm text-on-primary bg-primary-container hover:bg-primary transition-all shadow-[0_0_0_1px_#34D399,0_4px_14px_0_rgba(52,211,153,0.2)]" data-path="registro-prueba" href="#"><span class="material-symbols-outlined text-[18px] mr-space-xs hidden md:inline-block">health_and_safety</span>Prueba Gratuita 14 Días</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-gradient-to-b from-surface to-surface-container-low/40 pb-space-2xl">
+<div class="absolute -top-36 left-1/2 -translate-x-1/2 w-[760px] h-[340px] bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-gutter-desktop pt-space-xl">
+<div class="flex flex-col items-center text-center max-w-4xl mx-auto">
+<!-- Top Pill Badge -->
+<div class="inline-flex items-center gap-space-xs bg-surface-container px-space-md py-space-xs rounded-full shadow-sm mb-space-md">
+<span class="text-[14px]">🚀</span>
+<span class="font-label-lg text-label-lg text-primary tracking-wide">El 1er Software Nutricional Clínico Diseñado para Honduras · 100% Gastronomía Local</span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-display-lg text-display-lg text-on-surface font-extrabold tracking-tight max-w-3xl mb-space-md">
+          Multiplica la adherencia de tus pacientes <span class="text-primary underline decoration-primary-container/50 decoration-wavy decoration-2">sin prohibir</span> la comida hondureña.
+        </h1>
+<!-- Subhead -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-space-xl leading-relaxed">
+          El software clínico que reemplaza las dietas extranjeras restrictivas con reingeniería nutricional de baleadas, casamiento y alimentos locales respaldados por la tabla <strong class="text-on-surface font-semibold">TCA-HN</strong>, integración bioimpedancia <strong class="text-on-surface font-semibold">InBody</strong> y bot de WhatsApp (+504).
+        </p>
+<!-- CTA Form Group -->
+<div class="flex flex-col sm:flex-row items-center gap-space-sm w-full justify-center mb-space-sm">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs h-12 px-space-xl rounded-lg font-title-sm text-title-sm text-on-primary bg-primary-container hover:bg-primary transition-all shadow-[0_4px_16px_rgba(16,185,129,0.28)]" data-path="registro-prueba" href="#">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span>Comenzar Prueba Gratis (14 Días)</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs h-12 px-space-lg rounded-lg font-title-sm text-title-sm text-on-surface bg-surface-container-lowest hover:bg-surface-container shadow-sm transition-all" data-path="demo-interactiva" href="#">
+<span class="material-symbols-outlined text-[20px] text-primary">calendar_month</span>
+<span>Agendar Demo con Especialista</span>
+</a>
+</div>
+<p class="font-body-sm text-body-sm text-outline flex items-center gap-space-xs mb-space-2xl">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span>Sin tarjeta de crédito requerida · Cumple normativas tributarias y clínicas SAR &amp; CAI</span>
+</p>
+<!-- Social Proof Stats -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md w-full max-w-4xl p-space-md bg-surface-container-lowest rounded-xl shadow-sm mb-space-xl">
+<div class="flex flex-col items-center justify-center p-space-xs">
+<span class="font-headline-md text-headline-md font-extrabold text-on-surface">120+</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider text-center">Nutricionistas HN</span>
+</div>
+<div class="flex flex-col items-center justify-center p-space-xs">
+<span class="font-headline-md text-headline-md font-extrabold text-primary">+88%</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider text-center">Adherencia Sostenida</span>
+</div>
+<div class="flex flex-col items-center justify-center p-space-xs">
+<span class="font-headline-md text-headline-md font-extrabold text-on-surface">480+</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider text-center">Platos Calibrados HN</span>
+</div>
+<div class="flex flex-col items-center justify-center p-space-xs">
+<span class="font-headline-md text-headline-md font-extrabold text-secondary">99.4%</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider text-center">Retención Pacientes</span>
+</div>
+</div>
+</div>
+<!-- Dashboard Mockup Floating Viewport -->
+<div class="relative w-full max-w-5xl mx-auto -mt-4">
+<div class="p-space-sm bg-surface-container rounded-2xl shadow-xl">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<!-- Mockup Header Bar -->
+<div class="bg-surface-container-low px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-error/70 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-amber-400/80 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-primary-container/80 inline-block"></span>
+<span class="ml-space-sm font-code-data text-code-data text-outline">baleadafit.pro/clinica/pacientes/hn-0492-carlos-m</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+                  InBody BLE Conectado
+                </span>
+</div>
+</div>
+<!-- Dashboard Content Layout Grid -->
+<div class="p-space-lg grid grid-cols-1 lg:grid-cols-12 gap-space-lg bg-surface">
+<!-- Left Column: Patient Profile & Macro Target -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface">CM</div>
+<div>
+<div class="font-title-sm text-title-sm text-on-surface">Carlos Mendoza (34a)</div>
+<div class="font-body-sm text-body-sm text-outline">Tegucigalpa · Metabólico</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-2 py-1 rounded-full">Fase 2 Activa</span>
+</div>
+<!-- Macros progress -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span>Carbohidratos (Baleada integral HN)</span>
+<span class="font-code-data text-on-surface font-semibold">185g / 210g</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-blue-500 rounded-full" style="width: 78%;"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-outline pt-1">
+<span>Proteínas (Huevo + Cuajada light)</span>
+<span class="font-code-data text-on-surface font-semibold">134g / 140g</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 95%;"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-outline pt-1">
+<span>Lípidos (Aguacate de Tela)</span>
+<span class="font-code-data text-on-surface font-semibold">52g / 58g</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-amber-500 rounded-full" style="width: 88%;"></div>
+</div>
+</div>
+</div>
+<!-- WhatsApp Automation Status Chip -->
+<div class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary-container/20 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface">Bot WhatsApp (+504)</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Enviado 07:15 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                      "¡Hola Carlos! Tu baleada clínica matutina está calculada en 490 kcal. Recordá tus 300 ml de agua fresca."
+                    </p>
+</div>
+</div>
+</div>
+<!-- Right Column: Comparative Nutrition & InBody Curve -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Comparative Analysis Card: Baleada Tradicional vs Reingeniería Clínica -->
+<div class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">Reingeniería Nutricional BaleadaFit™</h4>
+<p class="font-body-sm text-body-sm text-outline">Optimización de ingredientes autóctonos sin sacrificar sabor</p>
+</div>
+<span class="font-label-sm text-label-sm bg-primary/10 text-primary px-3 py-1 rounded-full font-semibold">TCA-HN Certificado</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Standard Street Baleada -->
+<div class="p-space-sm bg-surface-container-high/60 rounded-lg">
+<div class="flex items-center justify-between text-outline text-label-sm font-label-sm mb-1">
+<span>Baleada Calle Típica</span>
+<span class="text-error font-bold">Desbalanceada</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-extrabold text-on-surface mb-2">680 <span class="font-body-sm text-body-sm font-normal text-outline">kcal</span></div>
+<div class="space-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between"><span>Harina blanca refinada:</span> <strong class="text-on-surface">62g CHO</strong></div>
+<div class="flex justify-between"><span>Manteca vegetal / Frijol refrito:</span> <strong class="text-error">28g Grasa</strong></div>
+<div class="flex justify-between"><span>Mantequilla crema alta sal:</span> <strong class="text-error">640mg Na</strong></div>
+</div>
+</div>
+<!-- Clinical Optimized Baleada -->
+<div class="p-space-sm bg-primary-container/10 rounded-lg">
+<div class="flex items-center justify-between text-primary font-label-sm text-label-sm mb-1">
+<span>Baleada Clínica Pro</span>
+<span class="font-bold text-primary">Protocolo Óptimo</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-extrabold text-primary mb-2">490 <span class="font-body-sm text-body-sm font-normal text-outline">kcal</span></div>
+<div class="space-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between"><span>Tortilla comal al vapor:</span> <strong class="text-on-surface">44g CHO</strong></div>
+<div class="flex justify-between"><span>Frijoles parados licuados con ajo:</span> <strong class="text-primary">12g Fibra</strong></div>
+<div class="flex justify-between"><span>Huevo revuelto + Cuajada seca:</span> <strong class="text-primary">26g Prot</strong></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro Bioimpedance Progress Sparkline Card -->
+<div class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">monitor_weight</span>
+<span class="font-title-sm text-title-sm text-on-surface">Curva de Grasa Visceral &amp; Adherencia (InBody 270)</span>
+</div>
+<span class="font-code-data text-code-data text-primary font-bold">-4.2% Grasa en 6 semanas</span>
+</div>
+<!-- Inline SVG Sparkline -->
+<div class="w-full h-16 pt-1">
+<svg class="w-full h-full" fill="none" viewbox="0 0 500 60">
+<path d="M 0,45 Q 120,40 240,25 T 500,10" fill="none" stroke="#10b981" stroke-linecap="round" stroke-width="3"></path>
+<path d="M 0,45 Q 120,40 240,25 T 500,10 L 500,60 L 0,60 Z" fill="url(#gradientMint)" opacity="0.15"></path>
+<circle cx="500" cy="10" fill="#006c49" r="4"></circle>
+<circle cx="240" cy="25" fill="#10b981" r="4"></circle>
+<circle cx="0" cy="45" fill="#6c7a71" r="4"></circle>
+<defs>
+<lineargradient id="gradientMint" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#10b981"></stop>
+<stop offset="100%" stop-color="#ffffff" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-outline pt-2">
+<span>Semana 1: 19.8% (Inicio)</span>
+<span>Semana 3: 17.6% (Adaptación TCA)</span>
+<span class="text-primary font-semibold">Semana 6: 15.6% (Objetivo)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PROBLEM SECTION -->
+<section class="w-full py-space-2xl bg-surface">
+<div class="max-w-7xl mx-auto px-gutter-desktop">
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<span class="font-label-lg text-label-lg uppercase tracking-wider text-outline">El Dilema Clínico en Honduras</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mt-space-xs">
+          ¿Por qué tus pacientes abandonan las dietas de softwares extranjeros?
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+          Las plataformas diseñadas en EE.UU. o Europa asumen canastas de consumo irreales y obligan al paciente hondureño al aislamiento social.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-error-container/40 text-error flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[26px]">shopping_cart_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-space-xs">
+              1. El Choque Biocultural
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Los softwares importados prescriben kale, salmón fresco noruego, espárragos y bayas de goji. El <strong class="text-error font-semibold">78% de pacientes hondureños</strong> deserta al segundo mes debido al impacto económico y la falta de disponibilidad en pulperías o mercados locales.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low p-space-sm rounded-lg font-body-sm text-body-sm text-outline">
+            Tasa de abandono reportada: <strong>68% a los 45 días</strong>.
+          </div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-amber-500/10 text-amber-600 flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[26px]">groups</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-space-xs">
+              2. La Ruptura Familiar
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              En los hogares de Tegus, SPS o Comayagua, la comida es un acto colectivo. Una minuta que obliga a cocinar pechuga hervida aislada del resto de la familia crea fricción emocional y conduce a la culpa cuando comen frijoles o plátano.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low p-space-sm rounded-lg font-body-sm text-body-sm text-outline">
+            Causa #1 de recaída calórica en fines de semana.
+          </div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[26px]">analytics</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-space-xs">
+              3. Cero Soporte Bromatológico HN
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Las tablas USDA o españolas no contemplan el índice glucémico de la tortilla de maíz nixtamalizado, la densidad calórica de los frijoles de seda ni el contenido lipídico de la cuajada de Olancho. El nutricionista termina calculando a mano en Excel.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low p-space-sm rounded-lg font-body-sm text-body-sm text-outline">
+            Pérdida de <strong>14 horas semanales</strong> en cálculo empírico.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SOLUTION / CORE VALUE SAAS FEATURES -->
+<section class="w-full py-space-2xl bg-surface-container-low/50">
+<div class="max-w-7xl mx-auto px-gutter-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div>
+<span class="font-label-lg text-label-lg uppercase tracking-wider text-primary font-bold">Tecnología Clínica Diferencial</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mt-space-xs max-w-xl">
+            La suite médica que comprende el paladar y la realidad económica de Honduras
+          </h2>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-xs rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Validado con tablas INCAP y TCA-HN</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Feature 1 -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">menu_book</span>
+</div>
+<span class="font-code-data text-code-data text-outline font-semibold">TCA-HN v3.4</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-space-xs">
+              Motor Bromatológico TCA-HN Exclusivo
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+              Más de 480 platos e ingredientes autóctonos analizados en laboratorio: desde yuca con chicharrón, tapado olanchano, baleadas con cuajada, hasta sopa de caracol y montucas. Desglose milimétrico de macro y micronutrientes, sodio, fibra y carga glucémica.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Búsqueda rápida en consulta:</span>
+<span class="font-code-data text-code-data text-primary font-semibold">&lt; 0.2 segundos</span>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">photo_camera</span>
+</div>
+<span class="font-label-sm text-label-sm bg-primary/10 text-primary px-3 py-1 rounded-full font-bold">Motor IA Visión</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-space-xs">
+              Auditoría Fotográfica con IA para Comida HN
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+              El paciente envía una foto de su almuerzo por la app o WhatsApp. Nuestra inteligencia artificial reconoce porciones de frijoles, arroz, plátano frito o asado, alertando discrepancias calóricas en tiempo real a tu expediente médico.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Precisión de detección local:</span>
+<span class="font-code-data text-code-data text-primary font-semibold">96.8% en platos típicos</span>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">forward_to_inbox</span>
+</div>
+<span class="font-code-data text-code-data text-outline font-semibold">Meta Business API (+504)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-space-xs">
+              Asistente Automatizado WhatsApp (+504)
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+              Reduce la inasistencia a consulta en un 73%. Envíos automáticos de recordatorios con instrucciones previas para pesaje InBody (ayuno, hidratación), minutas semanales en PDF interactivo y mensajes de soporte psicológico-conductual.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Tasa de apertura en pacientes HN:</span>
+<span class="font-code-data text-code-data text-primary font-semibold">98.2% vs 14% de correo</span>
+</div>
+</div>
+<!-- Feature 4 -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">devices</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-outline px-3 py-1 rounded-full font-bold">Bluetooth &amp; Cloud</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-space-xs">
+              Expediente Clínico &amp; Bioimpedancia Directa
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+              Sincronización instantánea con analizadores InBody (120, 270, 570), Tanita y básculas inteligentes. Gráficas evolutivas claras de masa magra segmentaria, agua intracelular y grasa visceral listas para imprimir o enviar.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Exportación para historia médica:</span>
+<span class="font-code-data text-code-data text-primary font-semibold">1-Click PDF Acreditado</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ROI CALCULATOR SECTION -->
+<section class="w-full py-space-2xl bg-surface">
+<div class="max-w-6xl mx-auto px-gutter-desktop">
+<div class="bg-surface-container p-space-xl rounded-2xl shadow-sm">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="font-label-lg text-label-lg uppercase tracking-wider text-primary font-bold">Retorno Clínico &amp; Financiero</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mt-space-xs">
+            Calcula el impacto real en los ingresos de tu consultorio
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+            BaleadaFit Pro no es un costo operativo, es un multiplicador directo de retención de pacientes recurrentes.
+          </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between text-center">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-outline font-bold">Tasa de Deserción a Mes 3</span>
+<div class="font-display-lg text-display-lg font-extrabold text-error mt-space-xs line-through opacity-70">68%</div>
+<div class="font-display-lg text-display-lg font-extrabold text-primary -mt-2">12%</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-md">
+              Tus pacientes ya no abandonan porque aprenden a comer lo que cocinan en sus hogares sin frustración.
+            </p>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between text-center">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-outline font-bold">Ingresos Mensuales Adicionales</span>
+<div class="font-display-lg text-display-lg font-extrabold text-primary mt-space-xs">
+                +L. 18,500 <span class="font-title-sm text-title-sm font-semibold text-outline">HNL</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-md">
+              Promedio de retención de 15 pacientes adicionales por mes a una tarifa de consulta estándar de L. 800 - L. 1,200 HNL.
+            </p>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between text-center">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-outline font-bold">Tiempo Ahorrado por Semana</span>
+<div class="font-display-lg text-display-lg font-extrabold text-on-surface mt-space-xs">
+                14 <span class="font-title-sm text-title-sm font-semibold text-outline">Horas / sem</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-md">
+              Automatización de minutas con equivalentes hondureños en 3 minutos en lugar de 45 minutos manuales.
+            </p>
+</div>
+</div>
+<div class="mt-space-xl p-space-md bg-surface-container-lowest rounded-xl flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm text-left">
+<span class="material-symbols-outlined text-[32px] text-primary">savings</span>
+<div>
+<div class="font-title-md text-title-md font-bold text-on-surface">Recuperación estimada de la inversión:</div>
+<div class="font-body-sm text-body-sm text-outline">El software se paga por sí solo con tan solo <strong class="text-on-surface">1 consulta recurrente extra</strong> al mes.</div>
+</div>
+</div>
+<a class="inline-flex items-center gap-space-xs h-11 px-space-lg rounded-lg font-title-sm text-title-sm text-on-primary bg-primary-container hover:bg-primary transition-all shrink-0" data-path="registro-prueba" href="#">
+<span>Comenzar a Rentabilizar</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- PRICING TIERS -->
+<section class="w-full py-space-2xl bg-surface-container-low/30">
+<div class="max-w-7xl mx-auto px-gutter-desktop">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="font-label-lg text-label-lg uppercase tracking-wider text-outline">Planes Transparentes en Moneda Local</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mt-space-xs">
+          Invierte en la tecnología clínica líder de Honduras
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+          Facturación en Lempiras (HNL) o Dólares (USD). Emisión de factura con CAI y constancia de retención SAR disponible.
+        </p>
+<!-- Billing Toggle Component -->
+<div class="inline-flex items-center gap-space-sm bg-surface-container p-1 rounded-full mt-space-lg shadow-sm">
+<button class="px-space-md py-1.5 rounded-full font-title-sm text-title-sm text-on-surface bg-surface-container-lowest shadow-sm transition-all" id="btn-monthly" onclick="setBilling('monthly')">Facturación Mensual</button>
+<button class="px-space-md py-1.5 rounded-full font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1" id="btn-annual" onclick="setBilling('annual')">
+<span>Facturación Anual</span>
+<span class="font-label-sm text-label-sm bg-primary-container text-on-primary px-2 py-0.5 rounded-full">Ahorra 20%</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg items-stretch">
+<!-- PLAN 1: Nutri Individual -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="font-title-md text-title-md font-bold text-on-surface mb-1">Nutri Individual</div>
+<p class="font-body-sm text-body-sm text-outline mb-space-md">Para profesionales independientes que inician su consultorio privado.</p>
+<div class="mb-space-lg">
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg text-display-lg font-extrabold text-on-surface" id="price-plan-1">L. 750</span>
+<span class="font-body-sm text-body-sm text-outline">/ mes</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline" id="sub-plan-1">O $30 USD facturados mensualmente</span>
+</div>
+<div class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant mb-space-xl">
+<div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Hasta 40 pacientes activos simultáneos</div>
+<div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Base Bromatológica TCA-HN completa</div>
+<div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Generador de minutas PDF personalizadas</div>
+<div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Recordatorios de WhatsApp básicos</div>
+<div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Cobros por Transferencia ACH Honduras</div>
+</div>
+</div>
+<a class="w-full inline-flex items-center justify-center h-11 px-space-md rounded-lg font-title-sm text-title-sm text-on-surface bg-surface-container hover:bg-surface-container-high transition-all" data-path="registro-prueba" href="#">
+            Comenzar con Nutri Individual
+          </a>
+</div>
+<!-- PLAN 2: Clínica Pro (POPULAR) -->
+<div class="relative bg-surface-container-lowest p-space-xl rounded-xl shadow-xl flex flex-col justify-between">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider px-space-md py-1 rounded-full shadow-sm font-bold">
+            Más Popular · Clínicas HN
+          </div>
+<div>
+<div class="font-title-md text-title-md font-bold text-on-surface mb-1 mt-2">Clínica Pro</div>
+<p class="font-body-sm text-body-sm text-outline mb-space-md">Para consultorios consolidados y nutricionistas con alto flujo clínico.</p>
+<div class="mb-space-lg">
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg text-display-lg font-extrabold text-primary" id="price-plan-2">L. 1,450</span>
+<span class="font-body-sm text-body-sm text-outline">/ mes</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline" id="sub-plan-2">O $59 USD facturados mensualmente</span>
+</div>
+<div class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant mb-space-xl">
+<div class="flex items-center gap-space-xs font-semibold text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Pacientes ilimitados</div>
+<div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Sincronización directa InBody BLE / Tanita</div>
+<div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Auditoría Fotográfica de Platos con IA</div>
+<div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Bot WhatsApp (+504) con IA conversacional</div>
+<div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Facturación fiscal con CAI y SAR hondureño</div>
+<div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>2 Licencias para nutricionistas incluidas</div>
+</div>
+</div>
+<a class="w-full inline-flex items-center justify-center h-11 px-space-md rounded-lg font-title-sm text-title-sm text-on-primary bg-primary-container hover:bg-primary transition-all shadow-[0_4px_12px_rgba(16,185,129,0.25)]" data-path="registro-prueba" href="#">
+            Elegir Clínica Pro (14 Días Gratis)
+          </a>
+</div>
+<!-- PLAN 3: Hospital & Corporativo -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="font-title-md text-title-md font-bold text-on-surface mb-1">Hospital &amp; Corporativo</div>
+<p class="font-body-sm text-body-sm text-outline mb-space-md">Para hospitales, centros médicos multidisciplinarios y gimnasios.</p>
+<div class="mb-space-lg">
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg text-display-lg font-extrabold text-on-surface" id="price-plan-3">L. 2,900</span>
+<span class="font-body-sm text-body-sm text-outline">/ mes</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline" id="sub-plan-3">O $119 USD facturados mensualmente</span>
+</div>
+<div class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant mb-space-xl">
+<div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Múltiples sucursales (Tegucigalpa, SPS, etc.)</div>
+<div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Hasta 10 licencias de profesionales de la salud</div>
+<div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>API Abierta para expediente hospitalario EMR</div>
+<div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Branding blanco personalizado con logo propio</div>
+<div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>Soporte clínico prioritario VIP 24/7 vía WhatsApp</div>
+</div>
+</div>
+<a class="w-full inline-flex items-center justify-center h-11 px-space-md rounded-lg font-title-sm text-title-sm text-on-surface bg-surface-container hover:bg-surface-container-high transition-all" data-path="demo-interactiva" href="#">
+            Contactar Ventas Corporativas
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- TESTIMONIALS SECTION -->
+<section class="w-full py-space-2xl bg-surface">
+<div class="max-w-7xl mx-auto px-gutter-desktop">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="font-label-lg text-label-lg uppercase tracking-wider text-outline">Evidencia en Consultorios Reales</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mt-space-xs">
+          Lo que dicen los especialistas colegiados de Honduras
+        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-xl max-w-5xl mx-auto">
+<!-- Testimonial 1: SPS -->
+<div class="p-space-xl bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-amber-500 mb-space-md">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant italic mb-space-lg leading-relaxed">
+              "En San Pedro Sula tratamos una altísima prevalencia de síndrome metabólico. Antes, mis pacientes diabéticos sentían que comer tortilla con frijoles era un pecado. Con la calibración de BaleadaFit Pro, aprendieron a moderar porciones y balancear macros reales. Mi tasa de retorno a control pasó del 35% al 91%."
+            </p>
+</div>
+<div class="flex items-center gap-space-md pt-space-md">
+<div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden shrink-0 flex items-center justify-center font-bold text-primary">
+              LR
+            </div>
+<div>
+<div class="font-title-sm text-title-sm text-on-surface font-bold">Dra. Lucía Rivera, M.Sc.</div>
+<div class="font-body-sm text-body-sm text-outline">Nutricionista Clínica · Hospital Cemesa, San Pedro Sula</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2: Tegucigalpa -->
+<div class="p-space-xl bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-amber-500 mb-space-md">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant italic mb-space-lg leading-relaxed">
+              "La integración automática con mi InBody y el bot de WhatsApp (+504) me ahorra horas cada tarde. Mis pacientes adoran recibir su minuta en PDF adaptada a lo que compran en el mercado Zonal Belén o en la pulpería. No hay otro software en Centroamérica con este nivel de especificidad."
+            </p>
+</div>
+<div class="flex items-center gap-space-md pt-space-md">
+<div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden shrink-0 flex items-center justify-center font-bold text-primary">
+              MA
+            </div>
+<div>
+<div class="font-title-sm text-title-sm text-on-surface font-bold">Lic. Miguel Ángel Zelaya</div>
+<div class="font-body-sm text-body-sm text-outline">Especialista en Nutrición Deportiva · Torre Morazán, Tegucigalpa</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FINAL CONVERSION BANNER -->
+<section class="w-full py-space-2xl bg-on-surface text-on-primary">
+<div class="max-w-5xl mx-auto px-gutter-desktop text-center">
+<div class="inline-flex items-center gap-space-xs bg-primary/20 text-primary-fixed px-space-md py-1 rounded-full mb-space-md font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Acreditado para Profesionales de la Salud de Honduras</span>
+</div>
+<h2 class="font-display-lg text-display-lg font-extrabold max-w-3xl mx-auto mb-space-md text-surface-container-lowest">
+        Eleva el estándar y la rentabilidad de tu consulta nutricional hoy mismo.
+      </h2>
+<p class="font-body-lg text-body-lg text-surface-container-highest max-w-2xl mx-auto mb-space-xl">
+        Únete a los más de 120 nutricionistas clínicos en Honduras que han revolucionado la relación de sus pacientes con la gastronomía tradicional.
+      </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-space-md">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs h-12 px-space-xl rounded-lg font-title-sm text-title-sm text-on-primary bg-primary-container hover:bg-primary transition-all shadow-[0_4px_16px_rgba(16,185,129,0.35)]" data-path="registro-prueba" href="#">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+<span>Comenzar Prueba Gratis (14 Días)</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs h-12 px-space-lg rounded-lg font-title-sm text-title-sm text-surface-container-lowest bg-surface-container-high/20 hover:bg-surface-container-high/30 transition-all" data-path="demo-interactiva" href="#">
+<span class="material-symbols-outlined text-[20px]">play_circle</span>
+<span>Ver Demo Guiada en Vivo</span>
+</a>
+</div>
+<div class="mt-space-xl flex flex-wrap items-center justify-center gap-space-lg text-surface-dim font-body-sm text-body-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary-container text-[18px]">check</span> Activación inmediata</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary-container text-[18px]">check</span> Sin contrato de permanencia</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary-container text-[18px]">check</span> Migración gratuita de tus pacientes desde Excel</span>
+</div>
+</div>
+</section>
+</div>
+<script>
+  function setBilling(mode) {
+    const btnMonthly = document.getElementById('btn-monthly');
+    const btnAnnual = document.getElementById('btn-annual');
+    const p1 = document.getElementById('price-plan-1');
+    const p2 = document.getElementById('price-plan-2');
+    const p3 = document.getElementById('price-plan-3');
+    const sub1 = document.getElementById('sub-plan-1');
+    const sub2 = document.getElementById('sub-plan-2');
+    const sub3 = document.getElementById('sub-plan-3');
+
+    if (mode === 'annual') {
+      btnAnnual.className = "px-space-md py-1.5 rounded-full font-title-sm text-title-sm text-on-surface bg-surface-container-lowest shadow-sm transition-all flex items-center gap-1";
+      btnMonthly.className = "px-space-md py-1.5 rounded-full font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-all";
+      
+      p1.textContent = "L. 600";
+      sub1.textContent = "L. 7,200 HNL / año ($24 USD/mes facturado anual)";
+      
+      p2.textContent = "L. 1,160";
+      sub2.textContent = "L. 13,920 HNL / año ($47 USD/mes facturado anual)";
+      
+      p3.textContent = "L. 2,320";
+      sub3.textContent = "L. 27,840 HNL / año ($95 USD/mes facturado anual)";
+    } else {
+      btnMonthly.className = "px-space-md py-1.5 rounded-full font-title-sm text-title-sm text-on-surface bg-surface-container-lowest shadow-sm transition-all";
+      btnAnnual.className = "px-space-md py-1.5 rounded-full font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1";
+      
+      p1.textContent = "L. 750";
+      sub1.textContent = "O $30 USD facturados mensualmente";
+      
+      p2.textContent = "L. 1,450";
+      sub2.textContent = "O $59 USD facturados mensualmente";
+      
+      p3.textContent = "L. 2,900";
+      sub3.textContent = "O $119 USD facturados mensualmente";
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] mt-space-2xl"><div class="max-w-7xl mx-auto px-gutter-desktop py-space-2xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-space-2xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Ultra-minimalist modern monogram icon for BaleadaFit Pro, tailored for embroidery on caps and polo shirts. Clean geometry representing a folded baleada arc interlocked with a sleek athletic letter B and pulse beat. Light version.. Brand logo. - Primary color: #10b981
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Uh72fEhCUPoFNEKWQVYPTdM0dTJN0IPjuNxIkwLL5cfox-jZHG5IP4o0WshZctQSsGzgqqSc4bRQRqAfg7HgOk2KksqKVJwyVm2J7B74R3P63QWigsmS0ktzOLuXnmP103hLTh7jUxxXnCUskiN3Wml1YJLFr91OtYvgp7lV47RU2T0CtWdF7dkRUGH4JaCo0_f2bwKIlGUfoU9ehJqT_F3IBgGV4HmjEw1xMOE5m940K0g27E9e37dQ7M"/><span class="font-title-md text-title-md font-bold text-on-surface">BaleadaFit Pro</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">El software clínico y teleconsulta de referencia en Centroamérica. Especializado en análisis de macronutrientes locales, cálculo metabólico y retención de pacientes.</p><div class="flex flex-col gap-space-xs mt-space-xs"><div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px] text-primary">support_agent</span><span>Soporte Clínico HN: <strong>+504 2239-8400</strong></span></div><div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px] text-primary">location_on</span><span>Torre Metrópolis, Tegucigalpa &amp; SPS, Honduras</span></div><div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px] text-primary">mail</span><span>clinica@baleadafit.pro</span></div></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg uppercase tracking-wider text-outline">Plataforma</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="caracteristicas" href="#">Módulo Dietoterapéutico</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="gastronomia-hn" href="#">Tabla Nutricional INCAP / HN</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="calculadora-roi" href="#">Calculadora ROI Clínico</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="planes-saas" href="#">Tarifas para Consultorios</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg uppercase tracking-wider text-outline">Cumplimiento &amp; Seguridad</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacidad" href="#">Privacidad y Datos de Salud</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="terminos-servicio" href="#">Términos de Licencia Médica</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="acreditacion-clinica" href="#">Acreditación y Estándares</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="seguridad-paciente" href="#">Encriptación HIPAA Compliant</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg uppercase tracking-wider text-outline">Pagos y Acreditación</span><div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm"><span class="font-label-sm text-label-sm uppercase text-outline font-bold">Facturación Nacional HN</span><div class="flex items-center gap-space-xs text-on-surface font-title-sm text-title-sm"><span class="material-symbols-outlined text-primary text-[20px]">account_balance</span><span>Transferencia ACH Honduras</span></div><div class="flex items-center gap-space-xs text-on-surface font-title-sm text-title-sm"><span class="material-symbols-outlined text-primary text-[20px]">credit_card</span><span>Visa / Mastercard Lempiras</span></div><span class="font-label-sm text-label-sm text-outline mt-space-xs">Facturación con CAI y SAR disponible</span></div><div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm mt-space-xs"><span class="material-symbols-outlined text-secondary text-[16px]">verified</span><span>Aval técnico para Colegiados HN</span></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><span class="font-body-sm text-body-sm text-outline">© 2025 BaleadaFit Pro Technologies Honduras. Todos los derechos reservados.</span><div class="flex items-center gap-space-md"><span class="font-body-sm text-body-sm text-outline flex items-center gap-space-xs"><span class="inline-block w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>Servidores en Nube Activos 99.98%</span></div></div></div></footer></body></html>
