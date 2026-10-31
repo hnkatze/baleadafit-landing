@@ -284,3 +284,158 @@ main button:active {
   opacity: 0;
   transform: translateY(-4px);
 }
+
+/*
+ * Borde animado de tarjetas.
+ * Barrido de luz al entrar en cuadro (una vez) y anillo que gira mientras el
+ * puntero está encima. Sólo hay pintado en el borde: un pseudo de 1px enmascarado.
+ */
+@property --card-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card-glow {
+  position: relative;
+  isolation: isolate;
+}
+
+.card-glow::before,
+.card-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  padding: 1px;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: conic-gradient(
+    from var(--card-angle),
+    transparent 0turn,
+    var(--color-primary-container) 0.055turn,
+    var(--color-secondary-container) 0.12turn,
+    transparent 0.25turn
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+@keyframes card-sweep {
+  0% {
+    --card-angle: 0deg;
+    opacity: 0;
+  }
+  18% {
+    opacity: 0.9;
+  }
+  82% {
+    opacity: 0.9;
+  }
+  100% {
+    --card-angle: 290deg;
+    opacity: 0;
+  }
+}
+
+@keyframes card-spin {
+  to {
+    --card-angle: 360deg;
+  }
+}
+
+@keyframes row-in {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Sin soporte de scroll-driven: el barrido se dispara cuando la sección entra. */
+  main > section.is-in .card-glow::before {
+    animation: card-sweep 1050ms var(--ease-swift) both;
+  }
+
+  .card-glow::after {
+    transition: opacity 220ms var(--ease-swift);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .card-glow:hover::after {
+      opacity: 1;
+      animation: card-spin 4s linear infinite;
+    }
+  }
+}
+
+/* Con soporte de animaciones atadas al scroll, el revelado y el barrido dependen
+   de la posición: avanzan y retroceden con el scroll en vez de disparar una vez. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    main > section > * > * {
+      opacity: 0;
+      transform: none;
+      transition: none;
+      animation: row-in linear both;
+      animation-timeline: view();
+      animation-range: entry 6% cover 30%;
+    }
+
+    main > section .card-glow::before {
+      animation: card-sweep linear both;
+      animation-timeline: view();
+      animation-range: entry 12% entry 82%;
+    }
+  }
+}
+
+/*
+ * Cascada de tarjetas atada al scroll: cada tarjeta sube un poco después que la
+ * anterior según cruza el borde inferior del viewport. Sólo donde hay
+ * animation-timeline; el resto de navegadores conserva el revelado por sección.
+ */
+@keyframes card-rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    main > section .card-glow {
+      animation: card-rise linear both;
+      animation-delay: 0s;
+      animation-timeline: view();
+      animation-range: entry 2% cover 22%;
+    }
+
+    main > section .card-glow:nth-child(2) {
+      animation-range: entry 5% cover 25%;
+    }
+
+    main > section .card-glow:nth-child(3) {
+      animation-range: entry 8% cover 28%;
+    }
+
+    main > section .card-glow:nth-child(n + 4) {
+      animation-range: entry 11% cover 31%;
+    }
+  }
+}
