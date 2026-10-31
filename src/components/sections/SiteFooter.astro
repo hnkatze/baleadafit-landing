@@ -1,0 +1,158 @@
+---
+// Port 1:1 del footer del mock de Stitch.
+// Clases font-<token> eliminadas: la familia la aporta `body` (font-sans).
+// Links de contacto apuntan a valores reales (tel / mailto).
+
+const platformLinks = [
+  { label: 'Módulo Dietoterapéutico', dataPath: 'caracteristicas', href: '#caracteristicas' },
+  { label: 'Tabla Nutricional INCAP / HN', dataPath: 'gastronomia-hn', href: '#gastronomia' },
+  { label: 'Calculadora ROI Clínico', dataPath: 'calculadora-roi', href: '#roi' },
+  { label: 'Tarifas para Consultorios', dataPath: 'planes-saas', href: '#planes' },
+];
+
+const complianceLinks = [
+  { label: 'Privacidad y Datos de Salud', dataPath: 'privacidad' },
+  { label: 'Términos de Licencia Médica', dataPath: 'terminos-servicio' },
+  { label: 'Acreditación y Estándares', dataPath: 'acreditacion-clinica' },
+  { label: 'Encriptación HIPAA Compliant', dataPath: 'seguridad-paciente' },
+];
+---
+
+<footer
+  id="footer-contacto"
+  class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] mt-space-2xl"
+>
+  <div class="max-w-7xl mx-auto px-gutter-desktop py-space-2xl">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-space-2xl"
+    >
+      <div class="lg:col-span-2 flex flex-col gap-space-md">
+        <div class="flex items-center gap-space-sm">
+          <img
+            alt="BaleadaFit Pro"
+            class="h-8 w-auto object-contain rounded-md"
+            src="/brand/baleadafit-lockup.png"
+          />
+          <span class="text-title-md font-bold text-on-surface">BaleadaFit Pro</span>
+        </div>
+        <p class="text-body-md text-on-surface-variant max-w-sm">
+          El software clínico y teleconsulta de referencia en Centroamérica. Especializado en
+          análisis de macronutrientes locales, cálculo metabólico y retención de pacientes.
+        </p>
+        <div class="flex flex-col gap-space-xs mt-space-xs">
+          <div
+            class="flex items-center gap-space-sm text-on-surface-variant text-body-sm"
+          >
+            <span class="material-symbols-outlined text-[18px] text-primary" aria-hidden="true"
+              >support_agent</span
+            >
+            <span
+              >Soporte Clínico HN:
+              <a class="hover:text-primary transition-colors" href="tel:+50422398400"
+                ><strong>+504 2239-8400</strong></a
+              ></span
+            >
+          </div>
+          <div
+            class="flex items-center gap-space-sm text-on-surface-variant text-body-sm"
+          >
+            <span class="material-symbols-outlined text-[18px] text-primary" aria-hidden="true"
+              >location_on</span
+            >
+            <span>Torre Metrópolis, Tegucigalpa &amp; SPS, Honduras</span>
+          </div>
+          <div
+            class="flex items-center gap-space-sm text-on-surface-variant text-body-sm"
+          >
+            <span class="material-symbols-outlined text-[18px] text-primary" aria-hidden="true"
+              >mail</span
+            >
+            <a
+              class="hover:text-primary transition-colors"
+              href="mailto:clinica@baleadafit.pro">clinica@baleadafit.pro</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-space-sm">
+        <span class="text-label-lg uppercase tracking-wider text-outline">Plataforma</span>
+        {
+          platformLinks.map((link) => (
+            <a
+              class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path={link.dataPath}
+              href={link.href}
+            >
+              {link.label}
+            </a>
+          ))
+        }
+      </div>
+
+      <div class="flex flex-col gap-space-sm">
+        <span class="text-label-lg uppercase tracking-wider text-outline"
+          >Cumplimiento &amp; Seguridad</span
+        >
+        {
+          complianceLinks.map((link) => (
+            <a
+              class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path={link.dataPath}
+              href="#"
+            >
+              {link.label}
+            </a>
+          ))
+        }
+      </div>
+
+      <div class="flex flex-col gap-space-sm">
+        <span class="text-label-lg uppercase tracking-wider text-outline"
+          >Pagos y Acreditación</span
+        >
+        <div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm">
+          <span class="text-label-sm uppercase text-outline font-bold">Facturación Nacional HN</span>
+          <div class="flex items-center gap-space-xs text-on-surface text-title-sm">
+            <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true"
+              >account_balance</span
+            >
+            <span>Transferencia ACH Honduras</span>
+          </div>
+          <div class="flex items-center gap-space-xs text-on-surface text-title-sm">
+            <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true"
+              >credit_card</span
+            >
+            <span>Visa / Mastercard Lempiras</span>
+          </div>
+          <span class="text-label-sm text-outline mt-space-xs"
+            >Facturación con CAI y SAR disponible</span
+          >
+        </div>
+        <div
+          class="flex items-center gap-space-xs text-on-surface-variant text-label-sm mt-space-xs"
+        >
+          <span class="material-symbols-outlined text-secondary text-[16px]" aria-hidden="true"
+            >verified</span
+          >
+          <span>Aval técnico para Colegiados HN</span>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"
+    >
+      <span class="text-body-sm text-outline"
+        >© 2025 BaleadaFit Pro Technologies Honduras. Todos los derechos reservados.</span
+      >
+      <div class="flex items-center gap-space-md">
+        <span class="text-body-sm text-outline flex items-center gap-space-xs"
+          ><span
+            class="inline-block w-2 h-2 rounded-full bg-primary-container animate-pulse"
+            aria-hidden="true"></span>Servidores en Nube Activos 99.98%</span
+        >
+      </div>
+    </div>
+  </div>
+</footer>

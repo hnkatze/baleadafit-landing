@@ -1,0 +1,171 @@
+---
+// Port 1:1 de la sección "Planes Transparentes en Moneda Local" del mock de Stitch.
+// Clases font-<token> eliminadas: la familia la aporta `body` (font-sans).
+// El toggle de facturación es una isla accesible: sin onclick inline ni getElementById.
+---
+
+<section id="planes" class="w-full py-space-2xl bg-surface-container-low/30" data-billing-root>
+  <div class="max-w-7xl mx-auto px-gutter-desktop">
+    <div class="text-center max-w-2xl mx-auto mb-space-xl">
+      <span class="text-label-lg uppercase tracking-wider text-outline">Planes Transparentes en Moneda Local</span>
+      <h2 class="text-headline-lg font-bold text-on-surface mt-space-xs">
+        Invierte en la tecnología clínica líder de Honduras
+      </h2>
+      <p class="text-body-md text-on-surface-variant mt-space-xs">
+        Facturación en Lempiras (HNL) o Dólares (USD). Emisión de factura con CAI y constancia de retención SAR disponible.
+      </p>
+      <!-- Billing Toggle Component -->
+      <div class="inline-flex items-center gap-space-sm bg-surface-container p-1 rounded-full mt-space-lg shadow-sm" role="group" aria-label="Periodicidad de facturación">
+        <button
+          type="button"
+          data-billing="monthly"
+          aria-pressed="true"
+          class="px-space-md py-1.5 rounded-full text-title-sm text-on-surface bg-surface-container-lowest shadow-sm transition-all"
+        >
+          Facturación Mensual
+        </button>
+        <button
+          type="button"
+          data-billing="annual"
+          aria-pressed="false"
+          class="px-space-md py-1.5 rounded-full text-title-sm text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1"
+        >
+          <span>Facturación Anual</span>
+          <span class="text-label-sm bg-primary-container text-on-primary px-2 py-0.5 rounded-full">Ahorra 20%</span>
+        </button>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg items-stretch">
+      <!-- PLAN 1: Nutri Individual -->
+      <div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="text-title-md font-bold text-on-surface mb-1">Nutri Individual</div>
+          <p class="text-body-sm text-outline mb-space-md">Para profesionales independientes que inician su consultorio privado.</p>
+          <div class="mb-space-lg">
+            <div class="flex items-baseline gap-1">
+              <span
+                class="text-display-lg font-extrabold text-on-surface"
+                data-price-monthly="L. 750"
+                data-price-annual="L. 600">L. 750</span>
+              <span class="text-body-sm text-outline">/ mes</span>
+            </div>
+            <span
+              class="text-label-sm text-outline"
+              data-sub-monthly="O $30 USD facturados mensualmente"
+              data-sub-annual="L. 7,200 HNL / año ($24 USD/mes facturado anual)">O $30 USD facturados mensualmente</span>
+          </div>
+          <div class="space-y-space-sm text-body-sm text-on-surface-variant mb-space-xl">
+            <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check_circle</span>Hasta 40 pacientes activos simultáneos</div>
+            <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check_circle</span>Base Bromatológica TCA-HN completa</div>
+            <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check_circle</span>Generador de minutas PDF personalizadas</div>
+            <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check_circle</span>Recordatorios de WhatsApp básicos</div>
+            <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check_circle</span>Cobros por Transferencia ACH Honduras</div>
+          </div>
+        </div>
+        <a class="w-full inline-flex items-center justify-center h-11 px-space-md rounded-lg text-title-sm text-on-surface bg-surface-container hover:bg-surface-container-high transition-all" href="#planes">
+          Comenzar con Nutri Individual
+        </a>
+      </div>
+      <!-- PLAN 2: Clínica Pro (POPULAR) -->
+      <div class="relative bg-surface-container-lowest p-space-xl rounded-xl shadow-xl flex flex-col justify-between">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-on-primary text-label-sm uppercase tracking-wider px-space-md py-1 rounded-full shadow-sm font-bold whitespace-nowrap">
+          Más Popular · Clínicas HN
+        </div>
+        <div>
+          <div class="text-title-md font-bold text-on-surface mb-1 mt-2">Clínica Pro</div>
+          <p class="text-body-sm text-outline mb-space-md">Para consultorios consolidados y nutricionistas con alto flujo clínico.</p>
+          <div class="mb-space-lg">
+            <div class="flex items-baseline gap-1">
+              <span
+                class="text-display-lg font-extrabold text-primary"
+                data-price-monthly="L. 1,450"
+                data-price-annual="L. 1,160">L. 1,450</span>
+              <span class="text-body-sm text-outline">/ mes</span>
+            </div>
+            <span
+              class="text-label-sm text-outline"
+              data-sub-monthly="O $59 USD facturados mensualmente"
+              data-sub-annual="L. 13,920 HNL / año ($47 USD/mes facturado anual)">O $59 USD facturados mensualmente</span>
+          </div>
+          <div class="space-y-space-sm text-body-sm text-on-surface-variant mb-space-xl">
+            <div class="flex items-center gap-space-xs font-semibold text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check_circle</span>Pacientes ilimitados</div>
+            <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check_circle</span>Sincronización directa InBody BLE / Tanita</div>
+            <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check_circle</span>Auditoría Fotográfica de Platos con IA</div>
+            <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check_circle</span>Bot WhatsApp (+504) con IA conversacional</div>
+            <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check_circle</span>Facturación fiscal con CAI y SAR hondureño</div>
+            <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check_circle</span>2 Licencias para nutricionistas incluidas</div>
+          </div>
+        </div>
+        <a class="w-full inline-flex items-center justify-center h-11 px-space-md rounded-lg text-title-sm text-on-primary bg-primary-container hover:bg-primary transition-all shadow-[0_4px_12px_rgba(16,185,129,0.25)]" href="#planes">
+          Elegir Clínica Pro (14 Días Gratis)
+        </a>
+      </div>
+      <!-- PLAN 3: Hospital & Corporativo -->
+      <div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="text-title-md font-bold text-on-surface mb-1">Hospital &amp; Corporativo</div>
+          <p class="text-body-sm text-outline mb-space-md">Para hospitales, centros médicos multidisciplinarios y gimnasios.</p>
+          <div class="mb-space-lg">
+            <div class="flex items-baseline gap-1">
+              <span
+                class="text-display-lg font-extrabold text-on-surface"
+                data-price-monthly="L. 2,900"
+                data-price-annual="L. 2,320">L. 2,900</span>
+              <span class="text-body-sm text-outline">/ mes</span>
+            </div>
+            <span
+              class="text-label-sm text-outline"
+              data-sub-monthly="O $119 USD facturados mensualmente"
+              data-sub-annual="L. 27,840 HNL / año ($95 USD/mes facturado anual)">O $119 USD facturados mensualmente</span>
+          </div>
+          <div class="space-y-space-sm text-body-sm text-on-surface-variant mb-space-xl">
+            <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check_circle</span>Múltiples sucursales (Tegucigalpa, SPS, etc.)</div>
+            <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check_circle</span>Hasta 10 licencias de profesionales de la salud</div>
+            <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check_circle</span>API Abierta para expediente hospitalario EMR</div>
+            <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check_circle</span>Branding blanco personalizado con logo propio</div>
+            <div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">check_circle</span>Soporte clínico prioritario VIP 24/7 vía WhatsApp</div>
+          </div>
+        </div>
+        <a class="w-full inline-flex items-center justify-center h-11 px-space-md rounded-lg text-title-sm text-on-surface bg-surface-container hover:bg-surface-container-high transition-all" href="#footer-contacto">
+          Contactar Ventas Corporativas
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const ACTIVE_CLASSES = ['text-on-surface', 'bg-surface-container-lowest', 'shadow-sm'];
+  const IDLE_CLASSES = ['text-on-surface-variant', 'hover:text-on-surface'];
+
+  const applyBilling = (root, mode) => {
+    root.querySelectorAll('[data-billing]').forEach((button) => {
+      const isActive = button.dataset.billing === mode;
+      button.setAttribute('aria-pressed', String(isActive));
+      button.classList.remove(...ACTIVE_CLASSES, ...IDLE_CLASSES);
+      button.classList.add(...(isActive ? ACTIVE_CLASSES : IDLE_CLASSES));
+    });
+
+    root.querySelectorAll('[data-price-monthly]').forEach((price) => {
+      price.textContent = mode === 'annual' ? price.dataset.priceAnnual : price.dataset.priceMonthly;
+    });
+
+    root.querySelectorAll('[data-sub-monthly]').forEach((sub) => {
+      sub.textContent = mode === 'annual' ? sub.dataset.subAnnual : sub.dataset.subMonthly;
+    });
+  };
+
+  document.querySelectorAll('[data-billing-root]').forEach((root) => {
+    root.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const button = target.closest('[data-billing]');
+      if (!button || !root.contains(button)) return;
+      const mode = button.dataset.billing;
+      if (mode !== 'monthly' && mode !== 'annual') return;
+      applyBilling(root, mode);
+    });
+
+    applyBilling(root, 'monthly');
+  });
+</script>
